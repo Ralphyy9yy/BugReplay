@@ -1,0 +1,16 @@
+{
+  "name": "demo-payment-app",
+  "version": "1.0.0",
+  "description": "Demo payment processing application (intentionally broken for BugReplay demo)",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vitest": "^2.1.1",
+    "@types/node": "^22.7.4"
+  }
+}
+

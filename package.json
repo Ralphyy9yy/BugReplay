@@ -1,0 +1,44 @@
+{
+  "name": "bug-replay",
+  "version": "0.1.0",
+  "description": "Logs tell you what happened. BugReplay tells you how to reproduce it.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "bug-replay": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup --config tsup.config.ts",
+    "dev": "tsx src/cli/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "ora": "^8.1.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "debugging",
+    "ai",
+    "cli",
+    "logs",
+    "bug-reproduction"
+  ],
+  "license": "MIT"
+}
