@@ -18,6 +18,7 @@ demo/.env.*
 # Local state & logs
 .bugreplay/
 *.log
+!demo/logs/server.log
 *.orig
 
 # OS files

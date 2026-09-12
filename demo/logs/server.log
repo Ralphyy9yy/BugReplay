@@ -1,0 +1,965 @@
+2024-01-15T08:00:00.000Z INFO Payment API server starting...
+2024-01-15T08:00:00.100Z INFO Loading environment configuration
+2024-01-15T08:00:00.150Z INFO Connecting to database...
+2024-01-15T08:00:00.350Z INFO Database connection established
+2024-01-15T08:00:00.450Z INFO Payment gateway client initialized
+2024-01-15T08:00:00.500Z INFO Express server listening on port 3000
+2024-01-15T08:00:01.130Z INFO GET /api/cart 200 154ms - requestId=req_e5f6a7b8
+2024-01-15T08:00:01.653Z INFO GET /api/orders 200 102ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:02.118Z INFO GET /api/orders 200 86ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:02.229Z INFO GET /api/auth/login 200 172ms - requestId=req_e5f6a7b8
+2024-01-15T08:00:02.588Z INFO GET /api/auth/login 200 35ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:03.015Z INFO GET /api/products 200 51ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:03.539Z INFO GET /api/orders 200 54ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:03.858Z INFO GET /api/products 200 175ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:04.475Z INFO GET /api/orders 200 113ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:05.222Z INFO GET /api/cart 200 136ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:05.430Z INFO GET /api/products 200 161ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:06.223Z INFO GET /api/auth/login 200 140ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:06.349Z INFO GET /api/payment/process 200 45ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:06.714Z INFO GET /api/cart 200 140ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:07.348Z INFO GET /api/products 200 163ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:07.931Z INFO GET /api/payment/process 200 33ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:08.163Z INFO GET /api/payment/process 200 138ms - requestId=req_e5f6a7b8
+2024-01-15T08:00:08.519Z INFO GET /api/orders 200 153ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:09.116Z INFO GET /api/products 200 169ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:09.609Z INFO GET /api/auth/login 200 79ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:09.753Z INFO GET /api/payment/process 200 149ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:10.278Z INFO GET /api/payment/process 200 78ms - requestId=req_e5f6a7b8
+2024-01-15T08:00:10.703Z INFO GET /api/auth/login 200 152ms - requestId=req_e5f6a7b8
+2024-01-15T08:00:11.165Z INFO GET /api/payment/process 200 104ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:11.888Z INFO GET /api/auth/login 200 149ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:12.080Z INFO GET /api/cart 200 120ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:12.766Z INFO GET /api/orders 200 128ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:13.003Z INFO GET /api/payment/process 200 104ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:13.752Z INFO GET /api/cart 200 45ms - requestId=req_e5f6a7b8
+2024-01-15T08:00:14.509Z INFO GET /api/orders 200 77ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:15.241Z INFO GET /api/auth/login 200 106ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:15.630Z INFO GET /api/payment/process 200 104ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:16.317Z INFO GET /api/products 200 160ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:16.781Z INFO GET /api/payment/process 200 64ms - requestId=req_e5f6a7b8
+2024-01-15T08:00:17.267Z INFO GET /api/auth/login 200 34ms - requestId=req_e5f6a7b8
+2024-01-15T08:00:17.501Z INFO GET /api/products 200 168ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:17.879Z INFO GET /api/orders 200 139ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:18.219Z INFO GET /api/auth/login 200 93ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:18.514Z INFO GET /api/products 200 104ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:18.860Z INFO GET /api/auth/login 200 90ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:19.023Z INFO GET /api/cart 200 20ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:19.405Z INFO GET /api/payment/process 200 91ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:19.864Z INFO GET /api/products 200 17ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:20.593Z INFO GET /api/products 200 40ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:21.237Z INFO GET /api/payment/process 200 69ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:21.373Z INFO GET /api/payment/process 200 77ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:22.156Z INFO GET /api/products 200 148ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:22.871Z INFO GET /api/orders 200 130ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:23.312Z INFO GET /api/payment/process 200 73ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:23.686Z INFO GET /api/payment/process 200 155ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:24.409Z INFO GET /api/cart 200 36ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:24.658Z INFO GET /api/orders 200 77ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:25.296Z INFO GET /api/cart 200 121ms - requestId=req_e5f6a7b8
+2024-01-15T08:00:25.624Z INFO GET /api/auth/login 200 44ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:26.013Z INFO GET /api/auth/login 200 136ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:26.628Z INFO GET /api/auth/login 200 139ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:26.786Z INFO GET /api/cart 200 83ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:27.067Z INFO GET /api/products 200 105ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:27.492Z INFO GET /api/orders 200 164ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:27.814Z INFO GET /api/payment/process 200 93ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:28.559Z INFO GET /api/payment/process 200 134ms - requestId=req_e5f6a7b8
+2024-01-15T08:00:29.311Z INFO GET /api/payment/process 200 45ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:29.707Z INFO GET /api/auth/login 200 100ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:30.236Z INFO GET /api/orders 200 148ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:30.943Z INFO GET /api/cart 200 68ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:31.212Z INFO GET /api/cart 200 88ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:31.460Z INFO GET /api/orders 200 83ms - requestId=req_e5f6a7b8
+2024-01-15T08:00:31.943Z INFO GET /api/payment/process 200 163ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:32.274Z INFO GET /api/products 200 99ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:32.566Z INFO GET /api/products 200 121ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:32.789Z INFO GET /api/products 200 70ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:32.949Z INFO GET /api/products 200 54ms - requestId=req_e5f6a7b8
+2024-01-15T08:00:33.291Z INFO GET /api/orders 200 159ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:33.499Z INFO GET /api/products 200 120ms - requestId=req_e5f6a7b8
+2024-01-15T08:00:33.622Z INFO GET /api/products 200 119ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:33.723Z INFO GET /api/auth/login 200 93ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:34.322Z INFO GET /api/orders 200 95ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:34.854Z INFO GET /api/products 200 59ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:35.243Z INFO GET /api/cart 200 127ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:35.532Z INFO GET /api/orders 200 34ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:35.806Z INFO GET /api/auth/login 200 38ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:36.269Z INFO GET /api/payment/process 200 139ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:36.553Z INFO GET /api/payment/process 200 180ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:37.051Z INFO GET /api/cart 200 161ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:37.480Z INFO GET /api/cart 200 57ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:37.836Z INFO GET /api/auth/login 200 30ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:37.979Z INFO GET /api/auth/login 200 87ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:38.440Z INFO GET /api/auth/login 200 161ms - requestId=req_e5f6a7b8
+2024-01-15T08:00:38.945Z INFO GET /api/orders 200 179ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:39.397Z INFO GET /api/auth/login 200 83ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:39.756Z INFO GET /api/orders 200 142ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:40.089Z INFO GET /api/auth/login 200 93ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:40.315Z INFO GET /api/orders 200 161ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:40.847Z INFO GET /api/cart 200 107ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:41.106Z INFO GET /api/orders 200 37ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:41.713Z INFO GET /api/auth/login 200 170ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:41.962Z INFO GET /api/payment/process 200 166ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:42.656Z INFO GET /api/cart 200 154ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:43.428Z INFO GET /api/payment/process 200 18ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:44.028Z INFO GET /api/auth/login 200 143ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:46.028Z INFO Payment refactor deployed - version 2.1.3
+2024-01-15T08:00:46.528Z INFO COMMIT a72fd1e: Refactor payment processing - updated response mapper
+2024-01-15T08:00:47.702Z INFO GET /api/auth/login 200 202ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:48.704Z INFO GET /api/auth/login 200 188ms - requestId=req_e5f6a7b8
+2024-01-15T08:00:49.946Z INFO GET /api/orders 200 264ms - requestId=req_a1b2c3d4
+2024-01-15T08:00:50.851Z INFO POST /api/cart 200 166ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:51.372Z INFO POST /api/auth/login 200 57ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:51.417Z INFO User eve authenticated successfully
+2024-01-15T08:00:51.444Z INFO Sending welcome notification to eve
+2024-01-15T08:00:51.489Z ERROR Authentication error for user eve - requestId=req_e7f8a9b0
+TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at getUserEmail (/app/src/auth.ts:68:18)
+    at sendWelcomeEmail (/app/src/notifications.ts:44:22)
+    at async afterAuthMiddleware (/app/src/middleware/auth.ts:89:5)
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+2024-01-15T08:00:52.838Z INFO POST /api/checkout 200 53ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:52.919Z INFO Processing checkout for order ord_1b4f9e2d - customerId=cust_003
+2024-01-15T08:00:52.990Z INFO Payment gateway called - amount=6063 currency=USD
+2024-01-15T08:00:53.188Z INFO Payment gateway response received - status=success (no id in response)
+2024-01-15T08:00:53.211Z ERROR Unhandled error processing checkout for order ord_1b4f9e2d - requestId=req_a3b4c5d6 customerId=cust_003
+TypeError: Cannot read properties of undefined (reading 'id')
+    at processCheckout (/app/src/checkout.ts:84:26)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+    at async Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:114:3)
+    at /app/src/middleware/auth.ts:22:5
+2024-01-15T08:00:53.261Z INFO POST /api/checkout 500 240ms - requestId=req_a3b4c5d6
+2024-01-15T08:00:54.086Z INFO GET /api/payment/process 200 239ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:55.250Z INFO GET /api/payment/process 200 161ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:55.672Z INFO GET /api/payment/process 200 196ms - requestId=req_c1d2e3f4
+2024-01-15T08:00:56.345Z INFO POST /api/products 200 180ms - requestId=req_e5f6a7b8
+2024-01-15T08:00:56.711Z INFO GET /api/auth/login 200 151ms - requestId=req_e7f8a9b0
+2024-01-15T08:00:57.845Z INFO POST /api/auth/login 200 92ms - requestId=req_c9d0e1f2
+2024-01-15T08:00:59.265Z INFO POST /api/products 200 128ms - requestId=req_a3b4c5d6
+2024-01-15T08:01:00.169Z INFO GET /api/auth/login 200 107ms - requestId=req_c1d2e3f4
+2024-01-15T08:01:01.379Z INFO GET /api/payment/process 200 294ms - requestId=req_c1d2e3f4
+2024-01-15T08:01:01.642Z INFO POST /api/checkout 200 62ms - requestId=req_c1d2e3f4
+2024-01-15T08:01:02.482Z INFO GET /api/cart 200 284ms - requestId=req_a1b2c3d4
+2024-01-15T08:01:03.684Z INFO GET /api/orders 200 112ms - requestId=req_c9d0e1f2
+2024-01-15T08:01:04.467Z INFO GET /api/cart 200 176ms - requestId=req_a3b4c5d6
+2024-01-15T08:01:04.837Z INFO GET /api/payment/process 200 119ms - requestId=req_c9d0e1f2
+2024-01-15T08:01:05.759Z INFO GET /api/orders 200 213ms - requestId=req_c1d2e3f4
+2024-01-15T08:01:06.364Z INFO GET /api/products 200 58ms - requestId=req_a1b2c3d4
+2024-01-15T08:01:07.771Z INFO GET /api/orders 200 165ms - requestId=req_e5f6a7b8
+2024-01-15T08:01:08.324Z INFO POST /api/auth/login 200 248ms - requestId=req_c1d2e3f4
+2024-01-15T08:01:08.951Z INFO POST /api/checkout 200 35ms - requestId=req_a3b4c5d6
+2024-01-15T08:01:09.005Z INFO Processing checkout for order ord_6c8a3f7b - customerId=cust_003
+2024-01-15T08:01:09.080Z INFO Payment gateway called - amount=3772 currency=USD
+2024-01-15T08:01:09.258Z INFO Payment gateway response received - status=success (no id in response)
+2024-01-15T08:01:09.274Z ERROR Unhandled error processing checkout for order ord_6c8a3f7b - requestId=req_e5f6a7b8 customerId=cust_003
+TypeError: Cannot read properties of undefined (reading 'id')
+    at processCheckout (/app/src/checkout.ts:84:26)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+    at async Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:114:3)
+    at /app/src/middleware/auth.ts:22:5
+2024-01-15T08:01:09.324Z INFO POST /api/checkout 500 283ms - requestId=req_c1d2e3f4
+2024-01-15T08:01:09.912Z INFO POST /api/checkout 200 57ms - requestId=req_c9d0e1f2
+2024-01-15T08:01:10.687Z INFO GET /api/cart 200 202ms - requestId=req_c9d0e1f2
+2024-01-15T08:01:12.077Z INFO POST /api/checkout 200 116ms - requestId=req_a3b4c5d6
+2024-01-15T08:01:13.441Z INFO POST /api/checkout 200 118ms - requestId=req_e5f6a7b8
+2024-01-15T08:01:13.456Z WARN Slow query detected: 1581ms on orders table
+2024-01-15T08:01:14.812Z INFO POST /api/auth/login 200 47ms - requestId=req_e7f8a9b0
+2024-01-15T08:01:14.858Z INFO User bob authenticated successfully
+2024-01-15T08:01:14.868Z INFO Sending welcome notification to bob
+2024-01-15T08:01:14.915Z ERROR Authentication error for user bob - requestId=req_e5f6a7b8
+TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at getUserEmail (/app/src/auth.ts:68:18)
+    at sendWelcomeEmail (/app/src/notifications.ts:44:22)
+    at async afterAuthMiddleware (/app/src/middleware/auth.ts:89:5)
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+2024-01-15T08:01:15.667Z INFO GET /api/payment/process 200 260ms - requestId=req_a3b4c5d6
+2024-01-15T08:01:16.818Z INFO GET /api/cart 503 293ms - requestId=req_a3b4c5d6
+2024-01-15T08:01:17.642Z INFO GET /api/orders 200 40ms - requestId=req_c1d2e3f4
+2024-01-15T08:01:18.226Z INFO GET /api/products 200 295ms - requestId=req_a3b4c5d6
+2024-01-15T08:01:18.429Z INFO GET /api/auth/login 200 185ms - requestId=req_e5f6a7b8
+2024-01-15T08:01:19.073Z INFO POST /api/products 200 133ms - requestId=req_c9d0e1f2
+2024-01-15T08:01:20.446Z INFO POST /api/payment/process 200 176ms - requestId=req_a3b4c5d6
+2024-01-15T08:01:20.811Z INFO POST /api/auth/login 200 281ms - requestId=req_c9d0e1f2
+2024-01-15T08:01:21.040Z INFO POST /api/orders 200 32ms - requestId=req_e7f8a9b0
+2024-01-15T08:01:22.345Z INFO POST /api/payment/process 200 65ms - requestId=req_c9d0e1f2
+2024-01-15T08:01:23.529Z INFO POST /api/checkout 200 48ms - requestId=req_e5f6a7b8
+2024-01-15T08:01:23.929Z INFO POST /api/checkout 200 201ms - requestId=req_e7f8a9b0
+2024-01-15T08:01:25.324Z INFO POST /api/products 200 161ms - requestId=req_a1b2c3d4
+2024-01-15T08:01:26.097Z INFO POST /api/auth/login 200 117ms - requestId=req_e5f6a7b8
+2024-01-15T08:01:26.107Z WARN Payment gateway response time elevated: 1218ms
+2024-01-15T08:01:27.104Z INFO POST /api/auth/login 200 182ms - requestId=req_e5f6a7b8
+2024-01-15T08:01:27.485Z INFO POST /api/auth/login 200 31ms - requestId=req_c1d2e3f4
+2024-01-15T08:01:27.993Z INFO GET /api/products 200 225ms - requestId=req_e7f8a9b0
+2024-01-15T08:01:28.614Z INFO GET /api/orders 200 280ms - requestId=req_c9d0e1f2
+2024-01-15T08:01:28.955Z INFO GET /api/payment/process 200 109ms - requestId=req_a3b4c5d6
+2024-01-15T08:01:29.883Z INFO GET /api/auth/login 200 87ms - requestId=req_c1d2e3f4
+2024-01-15T08:01:31.199Z INFO GET /api/payment/process 200 36ms - requestId=req_a1b2c3d4
+2024-01-15T08:01:32.557Z INFO POST /api/checkout 200 253ms - requestId=req_a1b2c3d4
+2024-01-15T08:01:33.922Z INFO GET /api/products 200 119ms - requestId=req_e7f8a9b0
+2024-01-15T08:01:35.124Z INFO POST /api/checkout 200 135ms - requestId=req_c1d2e3f4
+2024-01-15T08:01:36.158Z INFO POST /api/auth/login 200 165ms - requestId=req_c1d2e3f4
+2024-01-15T08:01:37.585Z INFO GET /api/auth/login 200 287ms - requestId=req_a1b2c3d4
+2024-01-15T08:01:37.811Z INFO POST /api/checkout 200 227ms - requestId=req_c9d0e1f2
+2024-01-15T08:01:38.518Z INFO POST /api/payment/process 200 213ms - requestId=req_e5f6a7b8
+2024-01-15T08:01:39.437Z INFO POST /api/cart 200 103ms - requestId=req_c1d2e3f4
+2024-01-15T08:01:40.017Z INFO GET /api/products 200 85ms - requestId=req_c9d0e1f2
+2024-01-15T08:01:41.080Z INFO GET /api/cart 200 295ms - requestId=req_e5f6a7b8
+2024-01-15T08:01:41.393Z INFO GET /api/orders 200 196ms - requestId=req_a1b2c3d4
+2024-01-15T08:01:42.791Z INFO POST /api/products 200 18ms - requestId=req_a3b4c5d6
+2024-01-15T08:01:43.420Z INFO GET /api/auth/login 200 228ms - requestId=req_e5f6a7b8
+2024-01-15T08:01:44.661Z INFO POST /api/checkout 200 88ms - requestId=req_c9d0e1f2
+2024-01-15T08:01:46.020Z INFO GET /api/payment/process 200 48ms - requestId=req_e5f6a7b8
+2024-01-15T08:01:46.561Z INFO POST /api/checkout 200 39ms - requestId=req_a1b2c3d4
+2024-01-15T08:01:46.698Z INFO Processing checkout for order ord_9c6b2e1f - customerId=cust_004
+2024-01-15T08:01:46.748Z INFO Payment gateway called - amount=1817 currency=USD
+2024-01-15T08:01:46.809Z INFO Payment gateway response received - status=success (no id in response)
+2024-01-15T08:01:46.838Z ERROR Unhandled error processing checkout for order ord_9c6b2e1f - requestId=req_c9d0e1f2 customerId=cust_004
+TypeError: Cannot read properties of undefined (reading 'id')
+    at processCheckout (/app/src/checkout.ts:84:26)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+    at async Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:114:3)
+    at /app/src/middleware/auth.ts:22:5
+2024-01-15T08:01:46.888Z INFO POST /api/checkout 500 638ms - requestId=req_e7f8a9b0
+2024-01-15T08:01:47.268Z INFO POST /api/checkout 200 52ms - requestId=req_c1d2e3f4
+2024-01-15T08:01:47.386Z INFO Processing checkout for order ord_3a5d7c8e - customerId=cust_001
+2024-01-15T08:01:47.438Z INFO Payment gateway called - amount=4658 currency=USD
+2024-01-15T08:01:47.560Z INFO Payment gateway response received - status=success (no id in response)
+2024-01-15T08:01:47.588Z ERROR Unhandled error processing checkout for order ord_3a5d7c8e - requestId=req_c9d0e1f2 customerId=cust_001
+TypeError: Cannot read properties of undefined (reading 'id')
+    at processCheckout (/app/src/checkout.ts:84:26)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+    at async Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:114:3)
+    at /app/src/middleware/auth.ts:22:5
+2024-01-15T08:01:47.638Z INFO POST /api/checkout 500 684ms - requestId=req_e7f8a9b0
+2024-01-15T08:01:47.907Z INFO POST /api/products 200 262ms - requestId=req_c1d2e3f4
+2024-01-15T08:01:48.387Z INFO POST /api/payment/process 200 176ms - requestId=req_c1d2e3f4
+2024-01-15T08:01:49.627Z INFO GET /api/payment/process 200 222ms - requestId=req_e7f8a9b0
+2024-01-15T08:01:50.836Z INFO GET /api/orders 200 32ms - requestId=req_a3b4c5d6
+2024-01-15T08:01:51.454Z INFO GET /api/payment/process 200 92ms - requestId=req_a3b4c5d6
+2024-01-15T08:01:52.269Z INFO POST /api/checkout 200 57ms - requestId=req_a3b4c5d6
+2024-01-15T08:01:52.362Z INFO Processing checkout for order ord_4e1d8f5a - customerId=cust_005
+2024-01-15T08:01:52.425Z INFO Payment gateway called - amount=9915 currency=USD
+2024-01-15T08:01:52.490Z INFO Payment gateway response received - status=success (no id in response)
+2024-01-15T08:01:52.505Z ERROR Unhandled error processing checkout for order ord_4e1d8f5a - requestId=req_a1b2c3d4 customerId=cust_005
+TypeError: Cannot read properties of undefined (reading 'id')
+    at processCheckout (/app/src/checkout.ts:84:26)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+    at async Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:114:3)
+    at /app/src/middleware/auth.ts:22:5
+2024-01-15T08:01:52.555Z INFO POST /api/checkout 500 454ms - requestId=req_e7f8a9b0
+2024-01-15T08:01:53.149Z INFO POST /api/checkout 200 243ms - requestId=req_a3b4c5d6
+2024-01-15T08:01:53.822Z INFO POST /api/checkout 200 177ms - requestId=req_a3b4c5d6
+2024-01-15T08:01:54.984Z INFO POST /api/checkout 200 77ms - requestId=req_e7f8a9b0
+2024-01-15T08:01:56.067Z INFO POST /api/checkout 200 247ms - requestId=req_a1b2c3d4
+2024-01-15T08:01:57.505Z INFO GET /api/payment/process 200 28ms - requestId=req_e7f8a9b0
+2024-01-15T08:01:58.362Z INFO GET /api/auth/login 200 152ms - requestId=req_a3b4c5d6
+2024-01-15T08:01:59.151Z INFO POST /api/checkout 200 42ms - requestId=req_c9d0e1f2
+2024-01-15T08:01:59.211Z INFO Processing checkout for order ord_1b4f9e2d - customerId=cust_006
+2024-01-15T08:01:59.286Z INFO Payment gateway called - amount=9361 currency=USD
+2024-01-15T08:01:59.401Z INFO Payment gateway response received - status=success (no id in response)
+2024-01-15T08:01:59.420Z ERROR Unhandled error processing checkout for order ord_1b4f9e2d - requestId=req_a3b4c5d6 customerId=cust_006
+TypeError: Cannot read properties of undefined (reading 'id')
+    at processCheckout (/app/src/checkout.ts:84:26)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+    at async Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:114:3)
+    at /app/src/middleware/auth.ts:22:5
+2024-01-15T08:01:59.470Z INFO POST /api/checkout 500 655ms - requestId=req_c1d2e3f4
+2024-01-15T08:02:00.130Z INFO POST /api/checkout 200 101ms - requestId=req_a1b2c3d4
+2024-01-15T08:02:00.528Z INFO GET /api/payment/process 200 166ms - requestId=req_a1b2c3d4
+2024-01-15T08:02:00.748Z INFO GET /api/payment/process 200 68ms - requestId=req_a1b2c3d4
+2024-01-15T08:02:01.576Z INFO POST /api/checkout 200 139ms - requestId=req_c9d0e1f2
+2024-01-15T08:02:02.128Z INFO POST /api/checkout 200 41ms - requestId=req_c1d2e3f4
+2024-01-15T08:02:02.179Z INFO Processing checkout for order ord_6c8a3f7b - customerId=cust_003
+2024-01-15T08:02:02.251Z INFO Payment gateway called - amount=2855 currency=USD
+2024-01-15T08:02:02.412Z INFO Payment gateway response received - status=success (no id in response)
+2024-01-15T08:02:02.425Z ERROR Unhandled error processing checkout for order ord_6c8a3f7b - requestId=req_c9d0e1f2 customerId=cust_003
+TypeError: Cannot read properties of undefined (reading 'id')
+    at processCheckout (/app/src/checkout.ts:84:26)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+    at async Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:114:3)
+    at /app/src/middleware/auth.ts:22:5
+2024-01-15T08:02:02.475Z INFO POST /api/checkout 500 711ms - requestId=req_a1b2c3d4
+2024-01-15T08:02:03.501Z INFO POST /api/auth/login 200 46ms - requestId=req_c1d2e3f4
+2024-01-15T08:02:04.964Z INFO POST /api/cart 200 243ms - requestId=req_a1b2c3d4
+2024-01-15T08:02:05.388Z INFO POST /api/products 200 125ms - requestId=req_a3b4c5d6
+2024-01-15T08:02:05.714Z INFO GET /api/auth/login 200 143ms - requestId=req_e7f8a9b0
+2024-01-15T08:02:06.837Z INFO GET /api/payment/process 200 39ms - requestId=req_c9d0e1f2
+2024-01-15T08:02:07.474Z INFO GET /api/products 200 159ms - requestId=req_c9d0e1f2
+2024-01-15T08:02:07.888Z INFO GET /api/cart 200 206ms - requestId=req_a3b4c5d6
+2024-01-15T08:02:09.225Z INFO GET /api/auth/login 200 169ms - requestId=req_e7f8a9b0
+2024-01-15T08:02:09.587Z INFO POST /api/checkout 200 66ms - requestId=req_a3b4c5d6
+2024-01-15T08:02:10.349Z INFO GET /api/auth/login 200 114ms - requestId=req_a3b4c5d6
+2024-01-15T08:02:11.794Z INFO GET /api/orders 200 210ms - requestId=req_c9d0e1f2
+2024-01-15T08:02:12.659Z INFO GET /api/cart 200 256ms - requestId=req_c9d0e1f2
+2024-01-15T08:02:13.263Z INFO GET /api/products 200 222ms - requestId=req_e5f6a7b8
+2024-01-15T08:02:13.809Z INFO GET /api/products 200 181ms - requestId=req_a3b4c5d6
+2024-01-15T08:02:14.396Z INFO GET /api/payment/process 200 158ms - requestId=req_c9d0e1f2
+2024-01-15T08:02:14.892Z INFO POST /api/checkout 200 58ms - requestId=req_c1d2e3f4
+2024-01-15T08:02:14.989Z INFO Processing checkout for order ord_9c6b2e1f - customerId=cust_003
+2024-01-15T08:02:15.067Z INFO Payment gateway called - amount=4071 currency=USD
+2024-01-15T08:02:15.259Z INFO Payment gateway response received - status=success (no id in response)
+2024-01-15T08:02:15.272Z ERROR Unhandled error processing checkout for order ord_9c6b2e1f - requestId=req_c1d2e3f4 customerId=cust_003
+TypeError: Cannot read properties of undefined (reading 'id')
+    at processCheckout (/app/src/checkout.ts:84:26)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+    at async Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:114:3)
+    at /app/src/middleware/auth.ts:22:5
+2024-01-15T08:02:15.322Z INFO POST /api/checkout 500 542ms - requestId=req_e5f6a7b8
+2024-01-15T08:02:16.800Z INFO POST /api/checkout 200 293ms - requestId=req_e7f8a9b0
+2024-01-15T08:02:17.989Z INFO POST /api/payment/process 200 158ms - requestId=req_a1b2c3d4
+2024-01-15T08:02:19.361Z INFO POST /api/payment/process 200 244ms - requestId=req_e7f8a9b0
+2024-01-15T08:02:20.394Z INFO POST /api/auth/login 200 43ms - requestId=req_a3b4c5d6
+2024-01-15T08:02:20.424Z INFO User bob authenticated successfully
+2024-01-15T08:02:20.454Z INFO Sending welcome notification to bob
+2024-01-15T08:02:20.481Z ERROR Authentication error for user bob - requestId=req_a1b2c3d4
+TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at getUserEmail (/app/src/auth.ts:68:18)
+    at sendWelcomeEmail (/app/src/notifications.ts:44:22)
+    at async afterAuthMiddleware (/app/src/middleware/auth.ts:89:5)
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+2024-01-15T08:02:21.312Z INFO GET /api/payment/process 200 110ms - requestId=req_e7f8a9b0
+2024-01-15T08:02:22.096Z INFO POST /api/checkout 200 222ms - requestId=req_e5f6a7b8
+2024-01-15T08:02:23.198Z INFO POST /api/cart 200 97ms - requestId=req_e5f6a7b8
+2024-01-15T08:02:23.208Z WARN Payment gateway response time elevated: 912ms
+2024-01-15T08:02:24.010Z INFO POST /api/cart 200 223ms - requestId=req_a1b2c3d4
+2024-01-15T08:02:25.444Z INFO GET /api/orders 200 153ms - requestId=req_e5f6a7b8
+2024-01-15T08:02:26.023Z INFO POST /api/checkout 200 249ms - requestId=req_c1d2e3f4
+2024-01-15T08:02:27.157Z INFO POST /api/checkout 200 47ms - requestId=req_a3b4c5d6
+2024-01-15T08:02:27.260Z INFO Processing checkout for order ord_7f3a9b2c - customerId=cust_006
+2024-01-15T08:02:27.295Z INFO Payment gateway called - amount=6508 currency=USD
+2024-01-15T08:02:27.361Z INFO Payment gateway response received - status=success (no id in response)
+2024-01-15T08:02:27.390Z ERROR Unhandled error processing checkout for order ord_7f3a9b2c - requestId=req_e5f6a7b8 customerId=cust_006
+TypeError: Cannot read properties of undefined (reading 'id')
+    at processCheckout (/app/src/checkout.ts:84:26)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+    at async Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:114:3)
+    at /app/src/middleware/auth.ts:22:5
+2024-01-15T08:02:27.440Z INFO POST /api/checkout 500 785ms - requestId=req_a1b2c3d4
+2024-01-15T08:02:28.182Z INFO POST /api/checkout 200 67ms - requestId=req_c1d2e3f4
+2024-01-15T08:02:29.079Z INFO POST /api/cart 200 48ms - requestId=req_e7f8a9b0
+2024-01-15T08:02:30.311Z INFO GET /api/cart 200 125ms - requestId=req_c9d0e1f2
+2024-01-15T08:02:31.044Z INFO GET /api/payment/process 200 40ms - requestId=req_e5f6a7b8
+2024-01-15T08:02:31.386Z INFO GET /api/auth/login 200 186ms - requestId=req_c1d2e3f4
+2024-01-15T08:02:31.752Z INFO POST /api/auth/login 200 148ms - requestId=req_e5f6a7b8
+2024-01-15T08:02:32.008Z INFO POST /api/auth/login 200 72ms - requestId=req_c1d2e3f4
+2024-01-15T08:02:32.048Z INFO User bob authenticated successfully
+2024-01-15T08:02:32.067Z INFO Sending welcome notification to bob
+2024-01-15T08:02:32.111Z ERROR Authentication error for user bob - requestId=req_a3b4c5d6
+TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at getUserEmail (/app/src/auth.ts:68:18)
+    at sendWelcomeEmail (/app/src/notifications.ts:44:22)
+    at async afterAuthMiddleware (/app/src/middleware/auth.ts:89:5)
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+2024-01-15T08:02:33.162Z INFO POST /api/auth/login 200 96ms - requestId=req_e5f6a7b8
+2024-01-15T08:02:33.210Z INFO User eve authenticated successfully
+2024-01-15T08:02:33.223Z INFO Sending welcome notification to eve
+2024-01-15T08:02:33.249Z ERROR Authentication error for user eve - requestId=req_c9d0e1f2
+TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at getUserEmail (/app/src/auth.ts:68:18)
+    at sendWelcomeEmail (/app/src/notifications.ts:44:22)
+    at async afterAuthMiddleware (/app/src/middleware/auth.ts:89:5)
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+2024-01-15T08:02:34.518Z INFO POST /api/orders 200 149ms - requestId=req_a1b2c3d4
+2024-01-15T08:02:35.076Z INFO GET /api/cart 200 161ms - requestId=req_a1b2c3d4
+2024-01-15T08:02:36.210Z INFO GET /api/auth/login 200 181ms - requestId=req_c9d0e1f2
+2024-01-15T08:02:36.765Z INFO GET /api/orders 200 83ms - requestId=req_c1d2e3f4
+2024-01-15T08:02:37.983Z INFO POST /api/checkout 200 103ms - requestId=req_c1d2e3f4
+2024-01-15T08:02:39.421Z INFO POST /api/checkout 200 226ms - requestId=req_e5f6a7b8
+2024-01-15T08:02:40.485Z INFO GET /api/orders 200 15ms - requestId=req_a3b4c5d6
+2024-01-15T08:02:41.726Z INFO GET /api/payment/process 200 258ms - requestId=req_a3b4c5d6
+2024-01-15T08:02:42.220Z INFO GET /api/payment/process 200 270ms - requestId=req_e5f6a7b8
+2024-01-15T08:02:43.047Z INFO POST /api/products 200 39ms - requestId=req_e7f8a9b0
+2024-01-15T08:02:44.323Z INFO POST /api/checkout 200 30ms - requestId=req_a3b4c5d6
+2024-01-15T08:02:44.448Z INFO Processing checkout for order ord_6c8a3f7b - customerId=cust_001
+2024-01-15T08:02:44.499Z INFO Payment gateway called - amount=6730 currency=USD
+2024-01-15T08:02:44.686Z INFO Payment gateway response received - status=success (no id in response)
+2024-01-15T08:02:44.701Z ERROR Unhandled error processing checkout for order ord_6c8a3f7b - requestId=req_e5f6a7b8 customerId=cust_001
+TypeError: Cannot read properties of undefined (reading 'id')
+    at processCheckout (/app/src/checkout.ts:84:26)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+    at async Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:114:3)
+    at /app/src/middleware/auth.ts:22:5
+2024-01-15T08:02:44.751Z INFO POST /api/checkout 500 571ms - requestId=req_e5f6a7b8
+2024-01-15T08:02:45.080Z INFO GET /api/payment/process 200 62ms - requestId=req_a3b4c5d6
+2024-01-15T08:02:46.526Z INFO GET /api/auth/login 200 183ms - requestId=req_c1d2e3f4
+2024-01-15T08:02:47.411Z INFO POST /api/cart 200 249ms - requestId=req_a1b2c3d4
+2024-01-15T08:02:48.636Z INFO GET /api/orders 200 134ms - requestId=req_c9d0e1f2
+2024-01-15T08:02:49.948Z INFO GET /api/auth/login 200 52ms - requestId=req_c1d2e3f4
+2024-01-15T08:02:50.791Z INFO POST /api/orders 404 272ms - requestId=req_c1d2e3f4
+2024-01-15T08:02:52.048Z INFO POST /api/payment/process 200 73ms - requestId=req_c9d0e1f2
+2024-01-15T08:02:52.955Z INFO POST /api/checkout 200 297ms - requestId=req_a3b4c5d6
+2024-01-15T08:02:53.179Z INFO GET /api/payment/process 200 243ms - requestId=req_c9d0e1f2
+2024-01-15T08:02:53.528Z INFO GET /api/auth/login 200 173ms - requestId=req_e7f8a9b0
+2024-01-15T08:02:54.048Z INFO Database connection pool health check initiated
+2024-01-15T08:02:54.102Z ERROR Database error while saving order ord_9c6b2e1f
+Error: Cannot call method on null - database not initialized
+    at InMemoryDatabase.assertInitialized (/app/src/db.ts:51:13)
+    at InMemoryDatabase.saveOrder (/app/src/db.ts:57:10)
+    at async processCheckout (/app/src/checkout.ts:90:5)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+2024-01-15T08:02:55.418Z INFO POST /api/checkout 200 208ms - requestId=req_c1d2e3f4
+2024-01-15T08:02:56.603Z INFO POST /api/checkout 200 274ms - requestId=req_a1b2c3d4
+2024-01-15T08:02:57.778Z INFO POST /api/products 200 111ms - requestId=req_a1b2c3d4
+2024-01-15T08:02:58.676Z INFO GET /api/payment/process 200 255ms - requestId=req_e7f8a9b0
+2024-01-15T08:02:59.425Z INFO GET /api/products 200 125ms - requestId=req_e5f6a7b8
+2024-01-15T08:03:00.371Z INFO GET /api/orders 200 264ms - requestId=req_a3b4c5d6
+2024-01-15T08:03:00.739Z INFO POST /api/orders 200 280ms - requestId=req_c1d2e3f4
+2024-01-15T08:03:02.178Z INFO GET /api/payment/process 200 176ms - requestId=req_c1d2e3f4
+2024-01-15T08:03:03.241Z INFO POST /api/checkout 200 214ms - requestId=req_c9d0e1f2
+2024-01-15T08:03:04.422Z INFO GET /api/orders 200 222ms - requestId=req_e7f8a9b0
+2024-01-15T08:03:04.758Z INFO GET /api/auth/login 200 159ms - requestId=req_e5f6a7b8
+2024-01-15T08:03:05.751Z INFO POST /api/products 200 296ms - requestId=req_c1d2e3f4
+2024-01-15T08:03:06.467Z INFO GET /api/payment/process 200 228ms - requestId=req_e7f8a9b0
+2024-01-15T08:03:07.664Z INFO POST /api/checkout 200 127ms - requestId=req_e7f8a9b0
+2024-01-15T08:03:07.996Z INFO POST /api/orders 200 54ms - requestId=req_e5f6a7b8
+2024-01-15T08:03:08.337Z INFO POST /api/checkout 200 47ms - requestId=req_e5f6a7b8
+2024-01-15T08:03:08.439Z INFO Processing checkout for order ord_6c8a3f7b - customerId=cust_002
+2024-01-15T08:03:08.476Z INFO Payment gateway called - amount=7931 currency=USD
+2024-01-15T08:03:08.555Z INFO Payment gateway response received - status=success (no id in response)
+2024-01-15T08:03:08.585Z ERROR Unhandled error processing checkout for order ord_6c8a3f7b - requestId=req_e5f6a7b8 customerId=cust_002
+TypeError: Cannot read properties of undefined (reading 'id')
+    at processCheckout (/app/src/checkout.ts:84:26)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+    at async Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:114:3)
+    at /app/src/middleware/auth.ts:22:5
+2024-01-15T08:03:08.635Z INFO POST /api/checkout 500 338ms - requestId=req_a3b4c5d6
+2024-01-15T08:03:09.317Z INFO GET /api/products 200 65ms - requestId=req_c1d2e3f4
+2024-01-15T08:03:10.816Z INFO POST /api/payment/process 200 83ms - requestId=req_c9d0e1f2
+2024-01-15T08:03:10.825Z WARN Payment gateway response time elevated: 1631ms
+2024-01-15T08:03:11.539Z INFO POST /api/products 200 292ms - requestId=req_a3b4c5d6
+2024-01-15T08:03:12.343Z INFO POST /api/payment/process 200 191ms - requestId=req_c9d0e1f2
+2024-01-15T08:03:13.776Z INFO POST /api/auth/login 200 179ms - requestId=req_a1b2c3d4
+2024-01-15T08:03:15.265Z INFO POST /api/payment/process 200 31ms - requestId=req_c9d0e1f2
+2024-01-15T08:03:16.699Z INFO GET /api/products 200 34ms - requestId=req_a1b2c3d4
+2024-01-15T08:03:17.946Z INFO GET /api/payment/process 200 230ms - requestId=req_c9d0e1f2
+2024-01-15T08:03:19.174Z INFO GET /api/products 200 34ms - requestId=req_c1d2e3f4
+2024-01-15T08:03:19.940Z INFO POST /api/payment/process 200 259ms - requestId=req_c9d0e1f2
+2024-01-15T08:03:21.242Z INFO POST /api/checkout 200 51ms - requestId=req_e5f6a7b8
+2024-01-15T08:03:21.292Z INFO Processing checkout for order ord_9c6b2e1f - customerId=cust_003
+2024-01-15T08:03:21.323Z INFO Payment gateway called - amount=8364 currency=USD
+2024-01-15T08:03:21.462Z INFO Payment gateway response received - status=success (no id in response)
+2024-01-15T08:03:21.491Z ERROR Unhandled error processing checkout for order ord_9c6b2e1f - requestId=req_a1b2c3d4 customerId=cust_003
+TypeError: Cannot read properties of undefined (reading 'id')
+    at processCheckout (/app/src/checkout.ts:84:26)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+    at async Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:114:3)
+    at /app/src/middleware/auth.ts:22:5
+2024-01-15T08:03:21.541Z INFO POST /api/checkout 500 384ms - requestId=req_c1d2e3f4
+2024-01-15T08:03:22.287Z INFO GET /api/products 200 212ms - requestId=req_e7f8a9b0
+2024-01-15T08:03:22.604Z INFO POST /api/payment/process 200 70ms - requestId=req_c9d0e1f2
+2024-01-15T08:03:23.386Z INFO POST /api/products 200 262ms - requestId=req_c1d2e3f4
+2024-01-15T08:03:24.580Z INFO POST /api/checkout 200 206ms - requestId=req_e5f6a7b8
+2024-01-15T08:03:25.982Z INFO GET /api/cart 200 46ms - requestId=req_e5f6a7b8
+2024-01-15T08:03:26.921Z INFO POST /api/checkout 200 264ms - requestId=req_e7f8a9b0
+2024-01-15T08:03:27.518Z INFO GET /api/orders 200 200ms - requestId=req_a1b2c3d4
+2024-01-15T08:03:28.572Z INFO Database connection pool health check initiated
+2024-01-15T08:03:28.674Z ERROR Database error while saving order ord_7f3a9b2c
+Error: Cannot call method on null - database not initialized
+    at InMemoryDatabase.assertInitialized (/app/src/db.ts:51:13)
+    at InMemoryDatabase.saveOrder (/app/src/db.ts:57:10)
+    at async processCheckout (/app/src/checkout.ts:90:5)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+2024-01-15T08:03:29.659Z INFO GET /api/cart 200 297ms - requestId=req_c1d2e3f4
+2024-01-15T08:03:31.118Z INFO POST /api/checkout 200 185ms - requestId=req_c1d2e3f4
+2024-01-15T08:03:32.366Z INFO POST /api/cart 200 49ms - requestId=req_c1d2e3f4
+2024-01-15T08:03:33.372Z INFO GET /api/products 200 281ms - requestId=req_c9d0e1f2
+2024-01-15T08:03:33.772Z INFO POST /api/products 200 147ms - requestId=req_e5f6a7b8
+2024-01-15T08:03:34.358Z INFO POST /api/checkout 200 289ms - requestId=req_e5f6a7b8
+2024-01-15T08:03:35.599Z INFO GET /api/payment/process 200 99ms - requestId=req_c1d2e3f4
+2024-01-15T08:03:36.120Z INFO GET /api/payment/process 200 197ms - requestId=req_c1d2e3f4
+2024-01-15T08:03:36.559Z INFO POST /api/products 200 280ms - requestId=req_c9d0e1f2
+2024-01-15T08:03:37.374Z INFO POST /api/checkout 200 44ms - requestId=req_e5f6a7b8
+2024-01-15T08:03:37.508Z INFO Processing checkout for order ord_9c6b2e1f - customerId=cust_005
+2024-01-15T08:03:37.580Z INFO Payment gateway called - amount=9279 currency=USD
+2024-01-15T08:03:37.660Z INFO Payment gateway response received - status=success (no id in response)
+2024-01-15T08:03:37.684Z ERROR Unhandled error processing checkout for order ord_9c6b2e1f - requestId=req_a3b4c5d6 customerId=cust_005
+TypeError: Cannot read properties of undefined (reading 'id')
+    at processCheckout (/app/src/checkout.ts:84:26)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+    at async Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:114:3)
+    at /app/src/middleware/auth.ts:22:5
+2024-01-15T08:03:37.734Z INFO POST /api/checkout 500 689ms - requestId=req_a3b4c5d6
+2024-01-15T08:03:38.968Z INFO POST /api/checkout 200 33ms - requestId=req_e5f6a7b8
+2024-01-15T08:03:39.062Z INFO Processing checkout for order ord_9c6b2e1f - customerId=cust_005
+2024-01-15T08:03:39.099Z INFO Payment gateway called - amount=6333 currency=USD
+2024-01-15T08:03:39.175Z INFO Payment gateway response received - status=success (no id in response)
+2024-01-15T08:03:39.192Z ERROR Unhandled error processing checkout for order ord_9c6b2e1f - requestId=req_c1d2e3f4 customerId=cust_005
+TypeError: Cannot read properties of undefined (reading 'id')
+    at processCheckout (/app/src/checkout.ts:84:26)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+    at async Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/app/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/app/node_modules/express/lib/router/route.js:114:3)
+    at /app/src/middleware/auth.ts:22:5
+2024-01-15T08:03:39.242Z INFO POST /api/checkout 500 770ms - requestId=req_e7f8a9b0
+2024-01-15T08:03:39.521Z INFO POST /api/auth/login 200 53ms - requestId=req_a3b4c5d6
+2024-01-15T08:03:39.569Z INFO User diana authenticated successfully
+2024-01-15T08:03:39.583Z INFO Sending welcome notification to diana
+2024-01-15T08:03:39.605Z ERROR Authentication error for user diana - requestId=req_e5f6a7b8
+TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at getUserEmail (/app/src/auth.ts:68:18)
+    at sendWelcomeEmail (/app/src/notifications.ts:44:22)
+    at async afterAuthMiddleware (/app/src/middleware/auth.ts:89:5)
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+2024-01-15T08:03:40.690Z INFO GET /api/payment/process 200 266ms - requestId=req_c9d0e1f2
+2024-01-15T08:03:41.364Z INFO GET /api/auth/login 200 123ms - requestId=req_c9d0e1f2
+2024-01-15T08:03:42.104Z INFO GET /api/payment/process 200 213ms - requestId=req_c9d0e1f2
+2024-01-15T08:03:43.251Z INFO POST /api/auth/login 200 35ms - requestId=req_a1b2c3d4
+2024-01-15T08:03:43.278Z INFO User charlie authenticated successfully
+2024-01-15T08:03:43.291Z INFO Sending welcome notification to charlie
+2024-01-15T08:03:43.338Z ERROR Authentication error for user charlie - requestId=req_a1b2c3d4
+TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at getUserEmail (/app/src/auth.ts:68:18)
+    at sendWelcomeEmail (/app/src/notifications.ts:44:22)
+    at async afterAuthMiddleware (/app/src/middleware/auth.ts:89:5)
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+2024-01-15T08:03:44.170Z INFO POST /api/checkout 200 197ms - requestId=req_c9d0e1f2
+2024-01-15T08:03:44.604Z INFO POST /api/auth/login 200 88ms - requestId=req_c9d0e1f2
+2024-01-15T08:03:44.961Z INFO GET /api/cart 200 261ms - requestId=req_e7f8a9b0
+2024-01-15T08:03:45.478Z INFO GET /api/products 200 30ms - requestId=req_e7f8a9b0
+2024-01-15T08:03:46.813Z INFO POST /api/products 200 115ms - requestId=req_c1d2e3f4
+2024-01-15T08:03:47.871Z INFO GET /api/products 200 275ms - requestId=req_e7f8a9b0
+2024-01-15T08:03:49.143Z INFO GET /api/orders 200 285ms - requestId=req_e7f8a9b0
+2024-01-15T08:03:50.615Z INFO GET /api/cart 200 77ms - requestId=req_c1d2e3f4
+2024-01-15T08:03:52.066Z INFO GET /api/orders 200 118ms - requestId=req_a3b4c5d6
+2024-01-15T08:03:52.071Z WARN Payment gateway response time elevated: 925ms
+2024-01-15T08:03:53.251Z INFO POST /api/checkout 200 234ms - requestId=req_c1d2e3f4
+2024-01-15T08:03:54.746Z INFO POST /api/payment/process 200 48ms - requestId=req_e7f8a9b0
+2024-01-15T08:03:55.777Z INFO POST /api/checkout 200 256ms - requestId=req_c1d2e3f4
+2024-01-15T08:03:56.914Z INFO GET /api/payment/process 200 234ms - requestId=req_e7f8a9b0
+2024-01-15T08:03:57.520Z INFO POST /api/cart 200 25ms - requestId=req_a3b4c5d6
+2024-01-15T08:03:58.040Z INFO GET /api/payment/process 200 137ms - requestId=req_c9d0e1f2
+2024-01-15T08:03:59.454Z INFO POST /api/auth/login 200 99ms - requestId=req_e7f8a9b0
+2024-01-15T08:03:59.485Z INFO User eve authenticated successfully
+2024-01-15T08:03:59.515Z INFO Sending welcome notification to eve
+2024-01-15T08:03:59.555Z ERROR Authentication error for user eve - requestId=req_e5f6a7b8
+TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at getUserEmail (/app/src/auth.ts:68:18)
+    at sendWelcomeEmail (/app/src/notifications.ts:44:22)
+    at async afterAuthMiddleware (/app/src/middleware/auth.ts:89:5)
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+2024-01-15T08:03:59.921Z INFO GET /api/products 200 137ms - requestId=req_c9d0e1f2
+2024-01-15T08:04:01.009Z INFO GET /api/cart 200 80ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:01.676Z INFO GET /api/auth/login 200 225ms - requestId=req_c1d2e3f4
+2024-01-15T08:04:02.874Z INFO Database connection pool health check initiated
+2024-01-15T08:04:03.010Z ERROR Database error while saving order ord_6c8a3f7b
+Error: Cannot call method on null - database not initialized
+    at InMemoryDatabase.assertInitialized (/app/src/db.ts:51:13)
+    at InMemoryDatabase.saveOrder (/app/src/db.ts:57:10)
+    at async processCheckout (/app/src/checkout.ts:90:5)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+2024-01-15T08:04:04.321Z INFO GET /api/auth/login 200 151ms - requestId=req_c1d2e3f4
+2024-01-15T08:04:04.756Z INFO Database connection pool health check initiated
+2024-01-15T08:04:04.822Z ERROR Database error while saving order ord_4e1d8f5a
+Error: Cannot call method on null - database not initialized
+    at InMemoryDatabase.assertInitialized (/app/src/db.ts:51:13)
+    at InMemoryDatabase.saveOrder (/app/src/db.ts:57:10)
+    at async processCheckout (/app/src/checkout.ts:90:5)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+2024-01-15T08:04:06.191Z INFO GET /api/cart 200 123ms - requestId=req_e5f6a7b8
+2024-01-15T08:04:06.704Z INFO GET /api/products 200 282ms - requestId=req_e5f6a7b8
+2024-01-15T08:04:07.741Z INFO POST /api/checkout 404 222ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:07.960Z INFO GET /api/payment/process 200 191ms - requestId=req_c1d2e3f4
+2024-01-15T08:04:08.649Z INFO POST /api/orders 200 225ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:09.671Z INFO GET /api/payment/process 200 28ms - requestId=req_e7f8a9b0
+2024-01-15T08:04:10.868Z INFO POST /api/checkout 200 235ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:12.142Z INFO POST /api/payment/process 200 51ms - requestId=req_c1d2e3f4
+2024-01-15T08:04:12.835Z INFO Database connection pool health check initiated
+2024-01-15T08:04:12.921Z ERROR Database error while saving order ord_1b4f9e2d
+Error: Cannot call method on null - database not initialized
+    at InMemoryDatabase.assertInitialized (/app/src/db.ts:51:13)
+    at InMemoryDatabase.saveOrder (/app/src/db.ts:57:10)
+    at async processCheckout (/app/src/checkout.ts:90:5)
+    at async handleCheckoutRequest (/app/src/routes/checkout.ts:31:22)
+2024-01-15T08:04:13.291Z INFO GET /api/orders 200 175ms - requestId=req_a3b4c5d6
+2024-01-15T08:04:13.686Z INFO GET /api/auth/login 200 162ms - requestId=req_c1d2e3f4
+2024-01-15T08:04:14.949Z INFO POST /api/checkout 200 239ms - requestId=req_a3b4c5d6
+2024-01-15T08:04:16.431Z INFO POST /api/checkout 200 241ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:17.821Z INFO POST /api/payment/process 200 47ms - requestId=req_e5f6a7b8
+2024-01-15T08:04:18.472Z INFO POST /api/checkout 200 191ms - requestId=req_c1d2e3f4
+2024-01-15T08:04:19.768Z INFO POST /api/payment/process 200 270ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:20.007Z INFO POST /api/payment/process 200 263ms - requestId=req_c1d2e3f4
+2024-01-15T08:04:20.779Z INFO POST /api/checkout 200 98ms - requestId=req_e7f8a9b0
+2024-01-15T08:04:21.841Z INFO POST /api/orders 200 98ms - requestId=req_a3b4c5d6
+2024-01-15T08:04:22.670Z INFO POST /api/checkout 200 176ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:24.066Z INFO POST /api/products 200 202ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:25.135Z INFO POST /api/checkout 200 290ms - requestId=req_c1d2e3f4
+2024-01-15T08:04:26.102Z INFO GET /api/products 200 164ms - requestId=req_e7f8a9b0
+2024-01-15T08:04:26.989Z INFO POST /api/checkout 200 167ms - requestId=req_a3b4c5d6
+2024-01-15T08:04:27.728Z INFO GET /api/cart 200 20ms - requestId=req_e5f6a7b8
+2024-01-15T08:04:29.164Z INFO GET /api/payment/process 200 219ms - requestId=req_c9d0e1f2
+2024-01-15T08:04:29.681Z INFO GET /api/payment/process 404 276ms - requestId=req_c9d0e1f2
+2024-01-15T08:04:30.257Z INFO GET /api/auth/login 200 148ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:30.608Z INFO GET /api/auth/login 200 41ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:31.895Z INFO GET /api/orders 200 137ms - requestId=req_e5f6a7b8
+2024-01-15T08:04:32.449Z INFO POST /api/payment/process 200 48ms - requestId=req_a3b4c5d6
+2024-01-15T08:04:33.481Z INFO POST /api/checkout 200 91ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:33.850Z INFO GET /api/payment/process 200 240ms - requestId=req_e7f8a9b0
+2024-01-15T08:04:34.089Z INFO POST /api/auth/login 200 253ms - requestId=req_c9d0e1f2
+2024-01-15T08:04:34.542Z INFO POST /api/cart 200 168ms - requestId=req_a3b4c5d6
+2024-01-15T08:04:35.179Z INFO POST /api/checkout 200 146ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:35.785Z INFO GET /api/payment/process 200 143ms - requestId=req_e7f8a9b0
+2024-01-15T08:04:36.679Z INFO POST /api/checkout 200 231ms - requestId=req_c1d2e3f4
+2024-01-15T08:04:38.010Z INFO GET /api/orders 200 116ms - requestId=req_e7f8a9b0
+2024-01-15T08:04:38.502Z INFO POST /api/checkout 200 38ms - requestId=req_c1d2e3f4
+2024-01-15T08:04:39.269Z INFO POST /api/checkout 200 190ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:40.283Z INFO GET /api/payment/process 200 91ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:41.148Z INFO GET /api/payment/process 200 214ms - requestId=req_c1d2e3f4
+2024-01-15T08:04:41.706Z INFO GET /api/products 200 214ms - requestId=req_c1d2e3f4
+2024-01-15T08:04:42.523Z INFO GET /api/auth/login 200 203ms - requestId=req_e7f8a9b0
+2024-01-15T08:04:43.997Z INFO POST /api/cart 200 104ms - requestId=req_c1d2e3f4
+2024-01-15T08:04:44.964Z INFO GET /api/cart 200 31ms - requestId=req_c9d0e1f2
+2024-01-15T08:04:46.389Z INFO GET /api/payment/process 200 50ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:47.402Z INFO GET /api/payment/process 200 27ms - requestId=req_c9d0e1f2
+2024-01-15T08:04:47.421Z WARN Slow query detected: 1494ms on orders table
+2024-01-15T08:04:47.852Z INFO POST /api/checkout 200 255ms - requestId=req_c9d0e1f2
+2024-01-15T08:04:48.883Z INFO POST /api/checkout 200 292ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:49.232Z INFO POST /api/checkout 200 101ms - requestId=req_c1d2e3f4
+2024-01-15T08:04:50.059Z INFO GET /api/cart 200 45ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:50.463Z INFO POST /api/products 200 109ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:50.755Z INFO GET /api/auth/login 200 187ms - requestId=req_e7f8a9b0
+2024-01-15T08:04:51.982Z INFO GET /api/payment/process 200 137ms - requestId=req_e7f8a9b0
+2024-01-15T08:04:53.189Z INFO GET /api/orders 200 290ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:54.134Z INFO POST /api/orders 200 101ms - requestId=req_a1b2c3d4
+2024-01-15T08:04:54.785Z INFO POST /api/checkout 200 226ms - requestId=req_c9d0e1f2
+2024-01-15T08:04:55.011Z INFO POST /api/cart 200 133ms - requestId=req_a3b4c5d6
+2024-01-15T08:04:56.155Z INFO POST /api/checkout 200 220ms - requestId=req_c1d2e3f4
+2024-01-15T08:04:57.305Z INFO GET /api/auth/login 200 66ms - requestId=req_e7f8a9b0
+2024-01-15T08:04:58.303Z INFO GET /api/cart 200 193ms - requestId=req_c9d0e1f2
+2024-01-15T08:04:58.842Z INFO GET /api/cart 200 227ms - requestId=req_e7f8a9b0
+2024-01-15T08:05:00.332Z INFO POST /api/auth/login 200 69ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:01.323Z INFO POST /api/products 200 280ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:01.795Z INFO GET /api/cart 200 142ms - requestId=req_e5f6a7b8
+2024-01-15T08:05:02.511Z INFO GET /api/auth/login 200 73ms - requestId=req_a1b2c3d4
+2024-01-15T08:05:03.075Z INFO POST /api/payment/process 200 167ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:04.178Z INFO GET /api/cart 200 223ms - requestId=req_e7f8a9b0
+2024-01-15T08:05:04.735Z INFO POST /api/products 200 275ms - requestId=req_a1b2c3d4
+2024-01-15T08:05:06.225Z INFO GET /api/orders 200 170ms - requestId=req_a3b4c5d6
+2024-01-15T08:05:07.662Z INFO POST /api/payment/process 200 85ms - requestId=req_e5f6a7b8
+2024-01-15T08:05:08.596Z INFO POST /api/checkout 200 240ms - requestId=req_a1b2c3d4
+2024-01-15T08:05:09.080Z INFO GET /api/orders 200 228ms - requestId=req_a3b4c5d6
+2024-01-15T08:05:09.909Z INFO POST /api/products 200 157ms - requestId=req_e7f8a9b0
+2024-01-15T08:05:10.119Z INFO POST /api/products 200 163ms - requestId=req_a1b2c3d4
+2024-01-15T08:05:11.245Z INFO GET /api/payment/process 200 117ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:12.263Z INFO GET /api/payment/process 200 244ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:13.488Z INFO POST /api/checkout 200 175ms - requestId=req_a1b2c3d4
+2024-01-15T08:05:14.237Z INFO GET /api/products 200 193ms - requestId=req_a3b4c5d6
+2024-01-15T08:05:14.886Z INFO POST /api/checkout 200 198ms - requestId=req_c1d2e3f4
+2024-01-15T08:05:15.519Z INFO POST /api/cart 200 299ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:16.990Z INFO POST /api/payment/process 200 157ms - requestId=req_a3b4c5d6
+2024-01-15T08:05:17.778Z INFO GET /api/orders 200 281ms - requestId=req_a1b2c3d4
+2024-01-15T08:05:18.664Z INFO GET /api/cart 200 244ms - requestId=req_e5f6a7b8
+2024-01-15T08:05:19.020Z INFO POST /api/payment/process 200 278ms - requestId=req_e5f6a7b8
+2024-01-15T08:05:19.767Z INFO POST /api/orders 200 147ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:20.294Z INFO POST /api/checkout 200 188ms - requestId=req_e5f6a7b8
+2024-01-15T08:05:21.082Z INFO POST /api/auth/login 200 286ms - requestId=req_a1b2c3d4
+2024-01-15T08:05:21.529Z INFO POST /api/products 200 88ms - requestId=req_e7f8a9b0
+2024-01-15T08:05:22.946Z INFO POST /api/checkout 200 228ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:22.968Z WARN Slow query detected: 1043ms on orders table
+2024-01-15T08:05:23.599Z INFO POST /api/payment/process 200 202ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:24.967Z INFO POST /api/orders 200 291ms - requestId=req_e7f8a9b0
+2024-01-15T08:05:25.249Z INFO POST /api/checkout 200 35ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:26.021Z INFO GET /api/products 200 20ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:27.209Z INFO POST /api/checkout 200 243ms - requestId=req_c1d2e3f4
+2024-01-15T08:05:27.736Z INFO GET /api/payment/process 200 108ms - requestId=req_c1d2e3f4
+2024-01-15T08:05:28.448Z INFO POST /api/auth/login 200 234ms - requestId=req_a1b2c3d4
+2024-01-15T08:05:28.805Z INFO GET /api/orders 200 270ms - requestId=req_e5f6a7b8
+2024-01-15T08:05:29.679Z INFO POST /api/checkout 200 51ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:29.912Z INFO GET /api/payment/process 200 144ms - requestId=req_c1d2e3f4
+2024-01-15T08:05:31.038Z INFO GET /api/products 200 166ms - requestId=req_a3b4c5d6
+2024-01-15T08:05:31.446Z INFO GET /api/payment/process 200 25ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:31.803Z INFO POST /api/payment/process 200 21ms - requestId=req_a3b4c5d6
+2024-01-15T08:05:32.201Z INFO GET /api/products 200 221ms - requestId=req_c1d2e3f4
+2024-01-15T08:05:32.473Z INFO GET /api/payment/process 200 266ms - requestId=req_a1b2c3d4
+2024-01-15T08:05:33.034Z INFO POST /api/payment/process 200 112ms - requestId=req_e5f6a7b8
+2024-01-15T08:05:33.626Z INFO POST /api/checkout 200 40ms - requestId=req_c1d2e3f4
+2024-01-15T08:05:34.383Z INFO GET /api/cart 200 193ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:34.823Z INFO POST /api/orders 200 114ms - requestId=req_a3b4c5d6
+2024-01-15T08:05:36.270Z INFO GET /api/auth/login 200 99ms - requestId=req_c1d2e3f4
+2024-01-15T08:05:36.749Z INFO GET /api/payment/process 200 138ms - requestId=req_e5f6a7b8
+2024-01-15T08:05:37.137Z INFO POST /api/checkout 200 100ms - requestId=req_a3b4c5d6
+2024-01-15T08:05:38.617Z INFO POST /api/products 200 62ms - requestId=req_e7f8a9b0
+2024-01-15T08:05:39.672Z INFO POST /api/auth/login 200 184ms - requestId=req_a3b4c5d6
+2024-01-15T08:05:40.479Z INFO POST /api/payment/process 200 85ms - requestId=req_c1d2e3f4
+2024-01-15T08:05:40.838Z INFO POST /api/auth/login 200 239ms - requestId=req_a3b4c5d6
+2024-01-15T08:05:42.267Z INFO POST /api/payment/process 200 174ms - requestId=req_e5f6a7b8
+2024-01-15T08:05:43.588Z INFO POST /api/checkout 200 65ms - requestId=req_c1d2e3f4
+2024-01-15T08:05:44.424Z INFO GET /api/cart 200 293ms - requestId=req_e5f6a7b8
+2024-01-15T08:05:45.316Z INFO POST /api/checkout 200 50ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:46.173Z INFO GET /api/payment/process 200 80ms - requestId=req_a1b2c3d4
+2024-01-15T08:05:46.926Z INFO GET /api/payment/process 200 114ms - requestId=req_a1b2c3d4
+2024-01-15T08:05:47.649Z INFO GET /api/orders 200 242ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:48.036Z INFO POST /api/payment/process 200 246ms - requestId=req_e7f8a9b0
+2024-01-15T08:05:49.060Z INFO GET /api/cart 200 184ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:49.958Z INFO GET /api/cart 200 282ms - requestId=req_c1d2e3f4
+2024-01-15T08:05:50.333Z INFO POST /api/checkout 200 171ms - requestId=req_c1d2e3f4
+2024-01-15T08:05:50.836Z INFO POST /api/orders 200 194ms - requestId=req_a1b2c3d4
+2024-01-15T08:05:51.309Z INFO POST /api/checkout 200 152ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:52.392Z INFO POST /api/checkout 200 42ms - requestId=req_c1d2e3f4
+2024-01-15T08:05:52.410Z WARN Slow query detected: 836ms on orders table
+2024-01-15T08:05:52.863Z INFO GET /api/auth/login 200 94ms - requestId=req_c1d2e3f4
+2024-01-15T08:05:54.271Z INFO GET /api/cart 200 253ms - requestId=req_e7f8a9b0
+2024-01-15T08:05:55.721Z INFO GET /api/auth/login 200 277ms - requestId=req_c9d0e1f2
+2024-01-15T08:05:56.879Z INFO GET /api/products 200 211ms - requestId=req_e7f8a9b0
+2024-01-15T08:05:57.385Z INFO POST /api/orders 200 294ms - requestId=req_a3b4c5d6
+2024-01-15T08:05:58.792Z INFO POST /api/products 200 150ms - requestId=req_a1b2c3d4
+2024-01-15T08:05:59.303Z INFO GET /api/auth/login 200 191ms - requestId=req_e7f8a9b0
+2024-01-15T08:05:59.845Z INFO POST /api/checkout 200 287ms - requestId=req_c1d2e3f4
+2024-01-15T08:06:00.596Z INFO GET /api/payment/process 200 176ms - requestId=req_e7f8a9b0
+2024-01-15T08:06:01.073Z INFO GET /api/products 200 72ms - requestId=req_c9d0e1f2
+2024-01-15T08:06:01.610Z INFO POST /api/orders 200 268ms - requestId=req_e7f8a9b0
+2024-01-15T08:06:02.297Z INFO GET /api/auth/login 200 255ms - requestId=req_a1b2c3d4
+2024-01-15T08:06:03.608Z INFO POST /api/checkout 200 188ms - requestId=req_c9d0e1f2
+2024-01-15T08:06:04.975Z INFO POST /api/payment/process 200 260ms - requestId=req_a1b2c3d4
+2024-01-15T08:06:04.984Z WARN Payment gateway response time elevated: 1687ms
+2024-01-15T08:06:05.971Z INFO GET /api/orders 200 98ms - requestId=req_a1b2c3d4
+2024-01-15T08:06:07.165Z INFO POST /api/payment/process 200 48ms - requestId=req_e7f8a9b0
+2024-01-15T08:06:08.135Z INFO GET /api/auth/login 200 233ms - requestId=req_a3b4c5d6
+2024-01-15T08:06:08.900Z INFO GET /api/orders 200 213ms - requestId=req_e7f8a9b0
+2024-01-15T08:06:09.728Z INFO GET /api/products 200 82ms - requestId=req_c1d2e3f4
+2024-01-15T08:06:11.021Z INFO GET /api/payment/process 200 31ms - requestId=req_e5f6a7b8
+2024-01-15T08:06:11.831Z INFO GET /api/payment/process 200 28ms - requestId=req_c1d2e3f4
+2024-01-15T08:06:12.314Z INFO POST /api/products 200 160ms - requestId=req_c1d2e3f4
+2024-01-15T08:06:13.249Z INFO GET /api/products 200 143ms - requestId=req_a3b4c5d6
+2024-01-15T08:06:14.372Z INFO GET /api/auth/login 200 220ms - requestId=req_c1d2e3f4
+2024-01-15T08:06:15.046Z INFO POST /api/payment/process 200 268ms - requestId=req_c1d2e3f4
+2024-01-15T08:06:16.182Z INFO GET /api/products 200 218ms - requestId=req_a3b4c5d6
+2024-01-15T08:06:17.206Z INFO GET /api/products 200 111ms - requestId=req_c1d2e3f4
+2024-01-15T08:06:17.612Z INFO GET /api/orders 200 133ms - requestId=req_c9d0e1f2
+2024-01-15T08:06:18.411Z INFO GET /api/auth/login 200 160ms - requestId=req_e7f8a9b0
+2024-01-15T08:06:19.808Z INFO GET /api/auth/login 200 70ms - requestId=req_c1d2e3f4
+2024-01-15T08:06:20.634Z INFO GET /api/products 200 50ms - requestId=req_c1d2e3f4
+2024-01-15T08:06:20.955Z INFO POST /api/payment/process 200 53ms - requestId=req_e7f8a9b0
+2024-01-15T08:06:21.772Z INFO GET /api/cart 200 52ms - requestId=req_a1b2c3d4
+2024-01-15T08:06:22.304Z INFO POST /api/orders 200 243ms - requestId=req_a3b4c5d6
+2024-01-15T08:06:23.442Z INFO POST /api/payment/process 200 269ms - requestId=req_e5f6a7b8
+2024-01-15T08:06:24.181Z INFO GET /api/orders 200 42ms - requestId=req_e5f6a7b8
+2024-01-15T08:06:25.416Z INFO GET /api/products 200 263ms - requestId=req_c9d0e1f2
+2024-01-15T08:06:26.646Z INFO POST /api/checkout 200 239ms - requestId=req_c1d2e3f4
+2024-01-15T08:06:27.995Z INFO GET /api/products 200 284ms - requestId=req_e7f8a9b0
+2024-01-15T08:06:28.375Z INFO GET /api/products 200 21ms - requestId=req_a1b2c3d4
+2024-01-15T08:06:29.785Z INFO GET /api/orders 200 152ms - requestId=req_c9d0e1f2
+2024-01-15T08:06:30.134Z INFO POST /api/products 200 232ms - requestId=req_e7f8a9b0
+2024-01-15T08:06:30.435Z INFO GET /api/products 200 260ms - requestId=req_a1b2c3d4
+2024-01-15T08:06:31.536Z INFO POST /api/checkout 200 272ms - requestId=req_e7f8a9b0
+2024-01-15T08:06:32.616Z INFO GET /api/orders 200 110ms - requestId=req_a3b4c5d6
+2024-01-15T08:06:33.473Z INFO GET /api/auth/login 200 104ms - requestId=req_a1b2c3d4
+2024-01-15T08:06:34.376Z INFO POST /api/orders 200 108ms - requestId=req_e7f8a9b0
+2024-01-15T08:06:35.621Z INFO POST /api/products 200 48ms - requestId=req_c9d0e1f2
+2024-01-15T08:06:36.176Z INFO POST /api/orders 200 133ms - requestId=req_c1d2e3f4
+2024-01-15T08:06:36.195Z WARN Slow query detected: 821ms on orders table
+2024-01-15T08:06:37.350Z INFO POST /api/checkout 200 38ms - requestId=req_e7f8a9b0
+2024-01-15T08:06:38.679Z INFO GET /api/auth/login 200 149ms - requestId=req_e5f6a7b8
+2024-01-15T08:06:39.829Z INFO POST /api/products 200 222ms - requestId=req_c9d0e1f2
+2024-01-15T08:06:40.621Z INFO POST /api/checkout 200 253ms - requestId=req_c9d0e1f2
+2024-01-15T08:06:42.051Z INFO GET /api/auth/login 200 109ms - requestId=req_c9d0e1f2
+2024-01-15T08:06:42.277Z INFO GET /api/auth/login 200 233ms - requestId=req_a3b4c5d6
+2024-01-15T08:06:43.065Z INFO GET /api/auth/login 200 139ms - requestId=req_c1d2e3f4
+2024-01-15T08:06:44.050Z INFO POST /api/auth/login 200 119ms - requestId=req_a1b2c3d4
+2024-01-15T08:06:44.986Z INFO GET /api/auth/login 200 273ms - requestId=req_a3b4c5d6
+2024-01-15T08:06:45.282Z INFO GET /api/cart 200 297ms - requestId=req_c1d2e3f4
+2024-01-15T08:06:46.335Z INFO GET /api/products 200 167ms - requestId=req_c1d2e3f4
+2024-01-15T08:06:46.913Z INFO GET /api/cart 200 74ms - requestId=req_a3b4c5d6
+2024-01-15T08:06:47.669Z INFO GET /api/payment/process 200 117ms - requestId=req_e7f8a9b0
+2024-01-15T08:06:49.055Z INFO GET /api/products 200 18ms - requestId=req_c1d2e3f4
+2024-01-15T08:06:50.523Z INFO POST /api/orders 200 135ms - requestId=req_c9d0e1f2
+2024-01-15T08:06:50.982Z INFO GET /api/products 200 121ms - requestId=req_a1b2c3d4
+2024-01-15T08:06:52.349Z INFO POST /api/cart 200 61ms - requestId=req_c9d0e1f2
+2024-01-15T08:06:53.708Z INFO GET /api/auth/login 200 55ms - requestId=req_e7f8a9b0
+2024-01-15T08:06:54.406Z INFO POST /api/checkout 200 87ms - requestId=req_e7f8a9b0
+2024-01-15T08:06:54.689Z INFO GET /api/auth/login 200 85ms - requestId=req_c9d0e1f2
+2024-01-15T08:06:55.012Z INFO GET /api/orders 200 142ms - requestId=req_c1d2e3f4
+2024-01-15T08:06:56.272Z INFO POST /api/products 200 181ms - requestId=req_c1d2e3f4
+2024-01-15T08:06:57.120Z INFO POST /api/orders 200 245ms - requestId=req_c9d0e1f2
+2024-01-15T08:06:58.500Z INFO GET /api/orders 200 234ms - requestId=req_e7f8a9b0
+2024-01-15T08:06:59.727Z INFO POST /api/checkout 200 41ms - requestId=req_a3b4c5d6
+2024-01-15T08:07:00.052Z INFO POST /api/checkout 200 233ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:00.426Z INFO GET /api/products 200 141ms - requestId=req_e7f8a9b0
+2024-01-15T08:07:01.643Z INFO POST /api/checkout 200 289ms - requestId=req_c1d2e3f4
+2024-01-15T08:07:02.274Z INFO POST /api/checkout 200 126ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:02.785Z INFO GET /api/payment/process 200 90ms - requestId=req_c1d2e3f4
+2024-01-15T08:07:04.116Z INFO POST /api/payment/process 200 285ms - requestId=req_e7f8a9b0
+2024-01-15T08:07:04.132Z WARN Slow query detected: 1501ms on orders table
+2024-01-15T08:07:04.619Z INFO GET /api/payment/process 200 162ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:04.643Z WARN Slow query detected: 517ms on orders table
+2024-01-15T08:07:05.618Z INFO GET /api/auth/login 200 267ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:06.879Z INFO GET /api/auth/login 200 177ms - requestId=req_e5f6a7b8
+2024-01-15T08:07:07.629Z INFO GET /api/payment/process 200 249ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:08.634Z INFO GET /api/auth/login 200 209ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:09.568Z INFO POST /api/checkout 200 156ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:10.522Z INFO POST /api/auth/login 200 293ms - requestId=req_a3b4c5d6
+2024-01-15T08:07:11.162Z INFO GET /api/products 200 276ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:12.144Z INFO POST /api/orders 503 78ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:13.618Z INFO GET /api/payment/process 200 44ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:13.883Z INFO GET /api/cart 200 32ms - requestId=req_a3b4c5d6
+2024-01-15T08:07:14.768Z INFO GET /api/products 200 217ms - requestId=req_a3b4c5d6
+2024-01-15T08:07:15.783Z INFO GET /api/auth/login 200 153ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:16.545Z INFO POST /api/auth/login 200 168ms - requestId=req_a3b4c5d6
+2024-01-15T08:07:17.759Z INFO POST /api/checkout 200 162ms - requestId=req_c1d2e3f4
+2024-01-15T08:07:18.630Z INFO GET /api/cart 200 100ms - requestId=req_c1d2e3f4
+2024-01-15T08:07:18.841Z INFO GET /api/cart 200 62ms - requestId=req_a3b4c5d6
+2024-01-15T08:07:19.438Z INFO GET /api/products 200 108ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:20.021Z INFO POST /api/checkout 200 190ms - requestId=req_e7f8a9b0
+2024-01-15T08:07:20.418Z INFO GET /api/auth/login 200 194ms - requestId=req_a3b4c5d6
+2024-01-15T08:07:21.096Z INFO POST /api/products 200 262ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:22.462Z INFO GET /api/cart 200 256ms - requestId=req_e5f6a7b8
+2024-01-15T08:07:23.155Z INFO GET /api/orders 200 59ms - requestId=req_e7f8a9b0
+2024-01-15T08:07:23.177Z WARN Slow query detected: 628ms on orders table
+2024-01-15T08:07:24.654Z INFO GET /api/products 200 100ms - requestId=req_c1d2e3f4
+2024-01-15T08:07:25.559Z INFO GET /api/auth/login 200 249ms - requestId=req_e5f6a7b8
+2024-01-15T08:07:26.847Z INFO GET /api/payment/process 200 283ms - requestId=req_c1d2e3f4
+2024-01-15T08:07:28.156Z INFO GET /api/orders 200 158ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:28.598Z INFO POST /api/payment/process 200 294ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:29.776Z INFO POST /api/products 200 163ms - requestId=req_a3b4c5d6
+2024-01-15T08:07:30.211Z INFO POST /api/payment/process 200 284ms - requestId=req_e7f8a9b0
+2024-01-15T08:07:30.702Z INFO GET /api/payment/process 200 215ms - requestId=req_e7f8a9b0
+2024-01-15T08:07:31.739Z INFO GET /api/payment/process 200 241ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:32.160Z INFO POST /api/cart 200 169ms - requestId=req_c9d0e1f2
+2024-01-15T08:07:33.155Z INFO POST /api/checkout 200 148ms - requestId=req_a3b4c5d6
+2024-01-15T08:07:34.020Z INFO POST /api/auth/login 200 133ms - requestId=req_c9d0e1f2
+2024-01-15T08:07:34.618Z INFO GET /api/payment/process 200 194ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:35.175Z INFO POST /api/cart 200 58ms - requestId=req_e5f6a7b8
+2024-01-15T08:07:36.413Z INFO POST /api/products 200 108ms - requestId=req_e7f8a9b0
+2024-01-15T08:07:36.655Z INFO GET /api/cart 200 169ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:37.615Z INFO GET /api/orders 200 101ms - requestId=req_a3b4c5d6
+2024-01-15T08:07:38.247Z INFO GET /api/products 200 195ms - requestId=req_e7f8a9b0
+2024-01-15T08:07:38.705Z INFO POST /api/cart 200 265ms - requestId=req_e7f8a9b0
+2024-01-15T08:07:39.199Z INFO POST /api/checkout 200 251ms - requestId=req_e7f8a9b0
+2024-01-15T08:07:39.506Z INFO GET /api/cart 200 102ms - requestId=req_a3b4c5d6
+2024-01-15T08:07:40.023Z INFO GET /api/payment/process 200 230ms - requestId=req_c1d2e3f4
+2024-01-15T08:07:40.466Z INFO GET /api/payment/process 200 269ms - requestId=req_c9d0e1f2
+2024-01-15T08:07:41.691Z INFO POST /api/cart 200 86ms - requestId=req_e5f6a7b8
+2024-01-15T08:07:42.149Z INFO GET /api/payment/process 200 169ms - requestId=req_e7f8a9b0
+2024-01-15T08:07:42.780Z INFO POST /api/checkout 200 235ms - requestId=req_c1d2e3f4
+2024-01-15T08:07:43.766Z INFO POST /api/cart 200 191ms - requestId=req_e7f8a9b0
+2024-01-15T08:07:45.027Z INFO POST /api/orders 200 209ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:46.153Z INFO POST /api/checkout 200 255ms - requestId=req_e7f8a9b0
+2024-01-15T08:07:46.777Z INFO GET /api/cart 200 104ms - requestId=req_e5f6a7b8
+2024-01-15T08:07:47.813Z INFO POST /api/payment/process 200 144ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:48.224Z INFO GET /api/products 200 276ms - requestId=req_c9d0e1f2
+2024-01-15T08:07:49.608Z INFO GET /api/payment/process 200 110ms - requestId=req_c9d0e1f2
+2024-01-15T08:07:49.840Z INFO POST /api/products 200 201ms - requestId=req_e7f8a9b0
+2024-01-15T08:07:50.652Z INFO GET /api/payment/process 200 161ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:51.717Z INFO GET /api/products 200 39ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:52.590Z INFO POST /api/auth/login 200 190ms - requestId=req_e7f8a9b0
+2024-01-15T08:07:53.677Z INFO POST /api/products 200 148ms - requestId=req_e7f8a9b0
+2024-01-15T08:07:54.218Z INFO GET /api/auth/login 200 86ms - requestId=req_a3b4c5d6
+2024-01-15T08:07:55.667Z INFO GET /api/auth/login 200 280ms - requestId=req_e7f8a9b0
+2024-01-15T08:07:57.010Z INFO GET /api/auth/login 200 244ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:57.769Z INFO GET /api/orders 200 90ms - requestId=req_a1b2c3d4
+2024-01-15T08:07:58.861Z INFO POST /api/payment/process 200 181ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:00.183Z INFO GET /api/products 200 231ms - requestId=req_a3b4c5d6
+2024-01-15T08:08:00.189Z WARN Payment gateway response time elevated: 1481ms
+2024-01-15T08:08:01.385Z INFO POST /api/checkout 200 146ms - requestId=req_a3b4c5d6
+2024-01-15T08:08:01.849Z INFO POST /api/auth/login 200 39ms - requestId=req_e7f8a9b0
+2024-01-15T08:08:02.803Z INFO GET /api/payment/process 200 189ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:03.297Z INFO GET /api/auth/login 200 275ms - requestId=req_c9d0e1f2
+2024-01-15T08:08:03.792Z INFO GET /api/payment/process 200 61ms - requestId=req_e5f6a7b8
+2024-01-15T08:08:04.041Z INFO GET /api/products 200 16ms - requestId=req_e7f8a9b0
+2024-01-15T08:08:04.330Z INFO GET /api/orders 200 61ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:04.762Z INFO GET /api/products 200 51ms - requestId=req_a3b4c5d6
+2024-01-15T08:08:04.934Z INFO GET /api/products 200 111ms - requestId=req_e5f6a7b8
+2024-01-15T08:08:05.198Z INFO GET /api/auth/login 200 155ms - requestId=req_e5f6a7b8
+2024-01-15T08:08:05.368Z INFO GET /api/orders 200 73ms - requestId=req_e5f6a7b8
+2024-01-15T08:08:05.778Z INFO GET /api/auth/login 200 21ms - requestId=req_e7f8a9b0
+2024-01-15T08:08:06.027Z INFO GET /api/payment/process 200 19ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:06.297Z INFO GET /api/auth/login 200 199ms - requestId=req_c9d0e1f2
+2024-01-15T08:08:06.439Z INFO GET /api/cart 200 68ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:06.745Z INFO GET /api/products 200 20ms - requestId=req_e5f6a7b8
+2024-01-15T08:08:06.853Z INFO GET /api/products 200 161ms - requestId=req_c9d0e1f2
+2024-01-15T08:08:07.082Z INFO GET /api/payment/process 200 86ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:07.408Z INFO GET /api/payment/process 200 153ms - requestId=req_c1d2e3f4
+2024-01-15T08:08:07.643Z INFO GET /api/payment/process 200 194ms - requestId=req_e5f6a7b8
+2024-01-15T08:08:07.971Z INFO GET /api/products 200 25ms - requestId=req_c1d2e3f4
+2024-01-15T08:08:08.288Z INFO GET /api/payment/process 200 10ms - requestId=req_e5f6a7b8
+2024-01-15T08:08:08.450Z INFO GET /api/orders 200 114ms - requestId=req_c1d2e3f4
+2024-01-15T08:08:08.675Z INFO GET /api/checkout 200 112ms - requestId=req_e7f8a9b0
+2024-01-15T08:08:08.844Z INFO GET /api/checkout 200 182ms - requestId=req_a3b4c5d6
+2024-01-15T08:08:09.011Z INFO GET /api/checkout 200 160ms - requestId=req_e7f8a9b0
+2024-01-15T08:08:09.252Z INFO GET /api/cart 200 143ms - requestId=req_c1d2e3f4
+2024-01-15T08:08:09.356Z INFO GET /api/products 200 124ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:09.746Z INFO GET /api/payment/process 200 169ms - requestId=req_a3b4c5d6
+2024-01-15T08:08:10.165Z INFO GET /api/payment/process 200 190ms - requestId=req_e5f6a7b8
+2024-01-15T08:08:10.271Z INFO GET /api/checkout 200 124ms - requestId=req_a3b4c5d6
+2024-01-15T08:08:10.747Z INFO GET /api/payment/process 200 108ms - requestId=req_a3b4c5d6
+2024-01-15T08:08:11.178Z INFO GET /api/auth/login 200 123ms - requestId=req_c9d0e1f2
+2024-01-15T08:08:11.446Z INFO GET /api/products 200 31ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:11.753Z INFO GET /api/cart 200 155ms - requestId=req_c9d0e1f2
+2024-01-15T08:08:12.182Z INFO GET /api/checkout 200 57ms - requestId=req_c1d2e3f4
+2024-01-15T08:08:12.378Z INFO GET /api/payment/process 200 92ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:12.544Z INFO GET /api/cart 200 144ms - requestId=req_c9d0e1f2
+2024-01-15T08:08:13.000Z INFO GET /api/payment/process 200 90ms - requestId=req_c1d2e3f4
+2024-01-15T08:08:13.200Z INFO GET /api/cart 200 82ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:13.695Z INFO GET /api/orders 200 109ms - requestId=req_c1d2e3f4
+2024-01-15T08:08:14.174Z INFO GET /api/auth/login 200 129ms - requestId=req_c1d2e3f4
+2024-01-15T08:08:14.365Z INFO GET /api/orders 200 120ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:14.523Z INFO GET /api/checkout 200 14ms - requestId=req_c1d2e3f4
+2024-01-15T08:08:14.991Z INFO GET /api/auth/login 200 66ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:15.289Z INFO GET /api/products 200 93ms - requestId=req_e7f8a9b0
+2024-01-15T08:08:15.445Z INFO GET /api/cart 200 74ms - requestId=req_a3b4c5d6
+2024-01-15T08:08:15.654Z INFO GET /api/payment/process 200 86ms - requestId=req_e5f6a7b8
+2024-01-15T08:08:16.151Z INFO GET /api/cart 200 132ms - requestId=req_e7f8a9b0
+2024-01-15T08:08:16.580Z INFO GET /api/products 200 45ms - requestId=req_c9d0e1f2
+2024-01-15T08:08:16.853Z INFO GET /api/checkout 200 118ms - requestId=req_c9d0e1f2
+2024-01-15T08:08:17.058Z INFO GET /api/payment/process 200 168ms - requestId=req_c9d0e1f2
+2024-01-15T08:08:17.186Z INFO GET /api/orders 200 20ms - requestId=req_e7f8a9b0
+2024-01-15T08:08:17.676Z INFO GET /api/checkout 200 153ms - requestId=req_a3b4c5d6
+2024-01-15T08:08:18.018Z INFO GET /api/orders 200 104ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:18.480Z INFO GET /api/orders 200 118ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:18.726Z INFO GET /api/payment/process 200 100ms - requestId=req_a3b4c5d6
+2024-01-15T08:08:18.966Z INFO GET /api/orders 200 96ms - requestId=req_c1d2e3f4
+2024-01-15T08:08:19.101Z INFO GET /api/payment/process 200 50ms - requestId=req_c1d2e3f4
+2024-01-15T08:08:19.490Z INFO GET /api/products 200 111ms - requestId=req_c1d2e3f4
+2024-01-15T08:08:19.719Z INFO GET /api/orders 200 59ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:19.965Z INFO GET /api/cart 200 17ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:20.243Z INFO GET /api/products 200 33ms - requestId=req_e7f8a9b0
+2024-01-15T08:08:20.440Z INFO GET /api/products 200 55ms - requestId=req_c1d2e3f4
+2024-01-15T08:08:20.713Z INFO GET /api/products 200 196ms - requestId=req_c9d0e1f2
+2024-01-15T08:08:20.890Z INFO GET /api/payment/process 200 154ms - requestId=req_a3b4c5d6
+2024-01-15T08:08:21.300Z INFO GET /api/orders 200 143ms - requestId=req_c9d0e1f2
+2024-01-15T08:08:21.567Z INFO GET /api/auth/login 200 200ms - requestId=req_e7f8a9b0
+2024-01-15T08:08:22.036Z INFO GET /api/orders 200 122ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:22.171Z INFO GET /api/payment/process 200 90ms - requestId=req_c9d0e1f2
+2024-01-15T08:08:22.329Z INFO GET /api/cart 200 158ms - requestId=req_e7f8a9b0
+2024-01-15T08:08:22.585Z INFO GET /api/products 200 187ms - requestId=req_c1d2e3f4
+2024-01-15T08:08:22.737Z INFO GET /api/orders 200 47ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:22.887Z INFO GET /api/payment/process 200 131ms - requestId=req_c1d2e3f4
+2024-01-15T08:08:23.201Z INFO GET /api/checkout 200 80ms - requestId=req_a3b4c5d6
+2024-01-15T08:08:23.448Z INFO GET /api/orders 200 153ms - requestId=req_a3b4c5d6
+2024-01-15T08:08:23.884Z INFO GET /api/orders 200 196ms - requestId=req_a3b4c5d6
+2024-01-15T08:08:24.170Z INFO GET /api/checkout 200 105ms - requestId=req_c1d2e3f4
+2024-01-15T08:08:24.362Z INFO GET /api/orders 200 73ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:24.629Z INFO GET /api/checkout 200 12ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:24.734Z INFO GET /api/products 200 87ms - requestId=req_a3b4c5d6
+2024-01-15T08:08:25.061Z INFO GET /api/cart 200 135ms - requestId=req_e7f8a9b0
+2024-01-15T08:08:25.374Z INFO GET /api/products 200 47ms - requestId=req_a1b2c3d4
+2024-01-15T08:08:25.609Z INFO GET /api/orders 200 120ms - requestId=req_e7f8a9b0
+2024-01-15T08:08:25.740Z INFO GET /api/auth/login 200 92ms - requestId=req_e5f6a7b8
+2024-01-15T08:08:25.740Z INFO Server stats: 964 total log lines processed
