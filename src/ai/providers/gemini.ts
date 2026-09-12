@@ -75,8 +75,6 @@ export class GeminiProvider implements AIProvider {
     const { redacted: cleanSystem } = redact(systemPrompt);
     const { redacted: cleanUser } = redact(userPrompt);
 
-    const url = `${this.baseUrl}/${this.model}:generateContent?key=${this.apiKey}`;
-
     const body: GeminiRequest = {
       system_instruction: {
         parts: [{ text: cleanSystem }],
@@ -94,46 +92,70 @@ export class GeminiProvider implements AIProvider {
       },
     };
 
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-      signal: AbortSignal.timeout(60_000), // 60s timeout
-    });
+    const candidateModels = [this.model, 'gemini-3.6-flash', 'gemini-3-flash-preview'];
+    let lastError: Error | null = null;
 
-    if (!response.ok) {
-      const errText = await response.text();
-      throw new Error(
-        `Gemini API error ${response.status}: ${errText.slice(0, 500)}`,
-      );
-    }
+    for (const model of candidateModels) {
+      const url = `${this.baseUrl}/${model}:generateContent?key=${this.apiKey}`;
 
-    const data = (await response.json()) as GeminiResponse;
+      for (let attempt = 1; attempt <= 3; attempt++) {
+        try {
+          const response = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body),
+            signal: AbortSignal.timeout(60_000), // 60s timeout
+          });
 
-    if (data.error) {
-      throw new Error(`Gemini API error: ${data.error.message}`);
-    }
+          if (response.status === 503 || response.status === 429) {
+            // Temporary spike — wait and retry
+            await new Promise((r) => setTimeout(r, 1000 * attempt));
+            continue;
+          }
 
-    const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
-    if (!text) {
-      throw new Error(
-        `Gemini returned no content. FinishReason: ${data.candidates?.[0]?.finishReason ?? 'unknown'}`,
-      );
-    }
+          if (!response.ok) {
+            const errText = await response.text();
+            throw new Error(
+              `Gemini API error ${response.status} (${model}): ${errText.slice(0, 500)}`,
+            );
+          }
 
-    // Parse JSON response
-    try {
-      return JSON.parse(text);
-    } catch {
-      // Try to extract JSON from markdown code blocks
-      const jsonMatch = /```(?:json)?\s*([\s\S]+?)\s*```/.exec(text);
-      if (jsonMatch?.[1]) {
-        return JSON.parse(jsonMatch[1]);
+          const data = (await response.json()) as GeminiResponse;
+
+          if (data.error) {
+            throw new Error(`Gemini API error: ${data.error.message}`);
+          }
+
+          const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+          if (!text) {
+            throw new Error(
+              `Gemini returned no content. FinishReason: ${data.candidates?.[0]?.finishReason ?? 'unknown'}`,
+            );
+          }
+
+          // Parse JSON response
+          try {
+            return JSON.parse(text);
+          } catch {
+            const jsonMatch = /```(?:json)?\s*([\s\S]+?)\s*```/.exec(text);
+            if (jsonMatch?.[1]) {
+              return JSON.parse(jsonMatch[1]);
+            }
+            throw new Error(`AI response is not valid JSON:\n${text.slice(0, 500)}`);
+          }
+        } catch (err) {
+          lastError = err instanceof Error ? err : new Error(String(err));
+          // If 503 or transient network error, retry
+          if (attempt < 3 && (lastError.message.includes('503') || lastError.message.includes('429'))) {
+            await new Promise((r) => setTimeout(r, 1000 * attempt));
+            continue;
+          }
+          break;
+        }
       }
-      throw new Error(
-        `AI response is not valid JSON:\n${text.slice(0, 500)}`,
-      );
     }
+
+    throw lastError ?? new Error('Gemini API call failed after retries');
   }
 
   async analyzeIncident(ctx: AnalysisContext): Promise<IncidentAnalysis> {

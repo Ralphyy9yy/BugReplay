@@ -1,8 +1,25 @@
+# Dependencies
 node_modules/
+
+# Build artifacts
 dist/
-*.log
-.env
-.bugreplay/
 coverage/
+
+# Environment and secrets (CRITICAL: never commit keys)
+.env
+.env.*
+!.env.example
+demo/.env
+demo/.env.*
+*.pem
+*.key
+*.cert
+
+# Local state & logs
+.bugreplay/
+*.log
 *.orig
 
+# OS files
+.DS_Store
+Thumbs.db

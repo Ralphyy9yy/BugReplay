@@ -3,18 +3,24 @@ import { resolve } from 'node:path';
 import { existsSync } from 'node:fs';
 import type { BugReplayConfig } from './types/index.js';
 
-// Load .env from CWD or project root
+// Load .env from CWD, parent directory, or workspace root
 dotenvConfig({ path: resolve(process.cwd(), '.env') });
+dotenvConfig({ path: resolve(process.cwd(), '..', '.env') });
 
 const VALID_PROVIDERS = ['gemini', 'openai', 'anthropic'] as const;
 const VALID_LOG_LEVELS = ['debug', 'info', 'warn', 'error'] as const;
 
 export function loadConfig(): BugReplayConfig {
-  const apiKey = process.env['BUGREPLAY_API_KEY'] ?? '';
+  const apiKey =
+    process.env['BUGREPLAY_API_KEY'] ??
+    process.env['GEMINI_API_KEY'] ??
+    process.env['OPENAI_API_KEY'] ??
+    process.env['ANTHROPIC_API_KEY'] ??
+    '';
   const providerRaw = process.env['BUGREPLAY_AI_PROVIDER'] ?? 'gemini';
   const model =
     process.env['BUGREPLAY_MODEL'] ??
-    (providerRaw === 'gemini' ? 'gemini-1.5-flash' : 'gpt-4o');
+    (providerRaw === 'gemini' ? 'gemini-flash-latest' : 'gpt-4o');
   const apiBaseUrl = process.env['BUGREPLAY_API_BASE_URL'] ?? undefined;
   const logLevelRaw = process.env['BUGREPLAY_LOG_LEVEL'] ?? 'info';
   const contextLinesRaw = process.env['BUGREPLAY_CONTEXT_LINES'] ?? '30';

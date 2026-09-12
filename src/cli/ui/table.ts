@@ -5,49 +5,47 @@ import { statusBadge } from './banner.js';
 /**
  * Print a formatted incident table.
  */
+function padVisible(str: string, width: number): string {
+  const visible = str.replace(/\x1B\[[0-9;]*[a-zA-Z]/g, '');
+  const diff = Math.max(0, width - visible.length);
+  return str + ' '.repeat(diff);
+}
+
 export function printIncidentTable(incidents: Incident[]): void {
   if (incidents.length === 0) {
-    console.log(chalk.gray('No incidents found. Run: bug-replay scan <logfile>'));
+    console.log(chalk.gray('  No incidents found. Run: bug-replay scan <logfile>'));
     return;
   }
 
-  const colWidths = { id: 4, type: 24, occ: 12, status: 14, location: 30 };
+  const colWidths = { id: 6, type: 22, occ: 14, status: 16, location: 28 };
 
   // Header
   console.log(
-    chalk.bold(
-      ' ' +
-        '#'.padEnd(colWidths.id) +
-        'Error Type'.padEnd(colWidths.type) +
-        'Occurrences'.padEnd(colWidths.occ) +
-        'Status'.padEnd(colWidths.status) +
-        'Location',
-    ),
+    '  ' +
+      chalk.bold.gray('#'.padEnd(colWidths.id)) +
+      chalk.bold.white('ERROR TYPE'.padEnd(colWidths.type)) +
+      chalk.bold.white('HITS'.padEnd(colWidths.occ)) +
+      chalk.bold.white('STATUS'.padEnd(colWidths.status)) +
+      chalk.bold.white('PRIMARY LOCATION'),
   );
-  console.log(chalk.gray('─'.repeat(90)));
+  console.log(chalk.gray('  ' + '─'.repeat(84)));
 
   for (const incident of incidents) {
-    const id = `#${incident.id}`.padEnd(colWidths.id);
-    const errorType = truncate(incident.errorType, colWidths.type - 1).padEnd(colWidths.type);
-    const occ = String(incident.occurrences).padEnd(colWidths.occ);
-    const status = statusBadge(incident.status).padEnd(colWidths.status + 10); // chalk adds chars
+    const id = padVisible(chalk.cyan(`#${incident.id}`), colWidths.id);
+    const errorType = padVisible(chalk.yellow.bold(truncate(incident.errorType, colWidths.type - 2)), colWidths.type);
+    const occ = padVisible(chalk.white(String(incident.occurrences)), colWidths.occ);
+    const status = padVisible(statusBadge(incident.status), colWidths.status);
 
     const location = incident.primaryFrame
-      ? truncate(
-          `${incident.primaryFrame.file.split('/').slice(-2).join('/')}:${incident.primaryFrame.line}`,
-          colWidths.location,
+      ? chalk.dim(
+          truncate(
+            `${incident.primaryFrame.file.replace(/\\/g, '/').split('/').slice(-2).join('/')}:${incident.primaryFrame.line}`,
+            colWidths.location,
+          ),
         )
       : chalk.gray('unknown');
 
-    const row =
-      ' ' +
-      chalk.bold.white(id) +
-      chalk.yellow(errorType) +
-      chalk.white(occ) +
-      status +
-      chalk.gray(location);
-
-    console.log(row);
+    console.log('  ' + id + errorType + occ + status + location);
   }
 }
 
