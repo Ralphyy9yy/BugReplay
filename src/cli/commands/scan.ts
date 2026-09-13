@@ -5,7 +5,7 @@ import chalk from 'chalk';
 import { parseLogFile } from '../../core/parser/logParser.js';
 import { groupEvents } from '../../core/incidents/grouper.js';
 import { saveIncidents, saveLogEvents } from '../../storage/store.js';
-import { printBanner, printSection, printSuccess, printError } from '../ui/banner.js';
+import { printBanner, printSection, printSuccess, printError, printNextStep } from '../ui/banner.js';
 import { printIncidentTable } from '../ui/table.js';
 
 export async function scanCommand(logFile: string): Promise<void> {
@@ -48,10 +48,7 @@ export async function scanCommand(logFile: string): Promise<void> {
     printIncidentTable(incidents);
 
     if (incidents.length > 0) {
-      console.log('');
-      console.log(chalk.gray('Next step:'));
-      console.log(chalk.white(`  bug-replay analyze ${incidents[0]?.id ?? 1}`));
-      console.log('');
+      printNextStep(`bug-replay analyze ${incidents[0]?.id ?? 1}`, 'Inspect the most frequent incident and its likely root cause.');
     }
   } catch (err) {
     spinner.fail('Scan failed');
@@ -59,4 +56,3 @@ export async function scanCommand(logFile: string): Promise<void> {
     process.exit(1);
   }
 }
-

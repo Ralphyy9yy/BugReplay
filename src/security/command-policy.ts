@@ -53,7 +53,7 @@ const ALLOWED_COMMANDS: AllowedCommand[] = [
     name: 'npm-install-no-save',
     pattern: /^npm\s+install\s*$/,
     timeoutMs: 300_000,
-    description: 'npm install (no modifications to package.json)',
+    description: 'Install dependencies from package.json',
   },
 ];
 
@@ -127,16 +127,17 @@ export async function executeAllowed(
   const start = Date.now();
 
   return new Promise((resolve, reject) => {
-    // Use shell: false equivalent by splitting manually
-    const [cmd, ...args] = command.trim().split(/\s+/);
-    if (!cmd) {
+    const parsed = parseAllowedCommand(command);
+    if (!parsed) {
       reject(new Error('Empty command'));
       return;
     }
 
-    const child = spawn(cmd, args, {
+    const executable = getExecutable(parsed.cmd, parsed.args);
+
+    const child = spawn(executable.cmd, executable.args, {
       cwd,
-      shell: true, // needed for npx/npm on Windows
+      shell: false,
       env: {
         ...process.env,
         // Prevent interactive prompts
@@ -180,3 +181,48 @@ export async function executeAllowed(
   });
 }
 
+interface ParsedCommand {
+  cmd: 'npm' | 'npx';
+  args: string[];
+}
+
+function parseAllowedCommand(command: string): ParsedCommand | undefined {
+  const trimmed = command.trim();
+
+  if (trimmed === 'npm test') return { cmd: 'npm', args: ['test'] };
+  if (trimmed === 'npm run test') return { cmd: 'npm', args: ['run', 'test'] };
+  if (trimmed === 'npm install') return { cmd: 'npm', args: ['install'] };
+  if (trimmed === 'npx vitest run') return { cmd: 'npx', args: ['vitest', 'run'] };
+
+  const reporterMatch = trimmed.match(
+    /^npx\s+vitest\s+run\s+--reporter\s+(\S+)\s+["']?([A-Za-z0-9_./\\: -]+)["']?$/,
+  );
+  if (reporterMatch) {
+    return {
+      cmd: 'npx',
+      args: ['vitest', 'run', '--reporter', reporterMatch[1]!, reporterMatch[2]!.trim()],
+    };
+  }
+
+  const fileMatch = trimmed.match(/^npx\s+vitest\s+run\s+["']?([A-Za-z0-9_./\\: -]+)["']?$/);
+  if (fileMatch) {
+    return { cmd: 'npx', args: ['vitest', 'run', fileMatch[1]!.trim()] };
+  }
+
+  return undefined;
+}
+
+interface ExecutableCommand {
+  cmd: string;
+  args: string[];
+}
+
+function getExecutable(command: 'npm' | 'npx', args: string[]): ExecutableCommand {
+  if (process.platform === 'win32') {
+    return {
+      cmd: 'cmd.exe',
+      args: ['/d', '/s', '/c', `${command}.cmd`, ...args],
+    };
+  }
+  return { cmd: command, args };
+}

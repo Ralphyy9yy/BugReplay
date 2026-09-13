@@ -1,37 +1,34 @@
 import { loadIncidents } from '../../storage/store.js';
-import { printBanner, printSection, printError } from '../ui/banner.js';
+import { printBanner, printCommand, printError, printSection } from '../ui/banner.js';
 import { printIncidentTable } from '../ui/table.js';
 import chalk from 'chalk';
 
 export async function incidentsCommand(): Promise<void> {
   printBanner();
 
-  const projectRoot = process.cwd();
-
   try {
-    const incidents = await loadIncidents(projectRoot);
+    const incidents = await loadIncidents(process.cwd());
 
     if (incidents.length === 0) {
       printError('No incidents found.');
       console.log('');
-      console.log('Run: bug-replay scan <path/to/server.log>');
+      printCommand('bug-replay scan <logfile>', 'Scan a log file to get started');
       console.log('');
       return;
     }
 
-    printSection('INCIDENTS');
+    printSection(`${incidents.length} INCIDENT${incidents.length === 1 ? '' : 'S'}`);
     printIncidentTable(incidents);
 
     console.log('');
-    console.log(chalk.gray('Commands:'));
-    console.log(chalk.white('  bug-replay analyze <id>   — run AI root-cause analysis'));
-    console.log(chalk.white('  bug-replay reproduce <id> — generate reproduction test'));
-    console.log(chalk.white('  bug-replay fix <id>       — propose a patch'));
-    console.log(chalk.white('  bug-replay verify <id>    — run regression test'));
+    console.log(chalk.bold.cyan('  AVAILABLE ACTIONS'));
+    printCommand('bug-replay analyze <id>', 'Find the likely root cause');
+    printCommand('bug-replay reproduce <id>', 'Generate a regression test');
+    printCommand('bug-replay fix <id>', 'Propose a source patch');
+    printCommand('bug-replay verify <id>', 'Verify reproduction or fix');
     console.log('');
   } catch (err) {
     printError(err instanceof Error ? err.message : String(err));
     process.exit(1);
   }
 }
-

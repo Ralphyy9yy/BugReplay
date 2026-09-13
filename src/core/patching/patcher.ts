@@ -1,5 +1,5 @@
 import { readFile, writeFile, copyFile } from 'node:fs/promises';
-import { resolve, dirname } from 'node:path';
+import { resolve, relative } from 'node:path';
 import { existsSync } from 'node:fs';
 import type { PatchProposal, FilePatch } from '../../types/index.js';
 import { resolveProjectFile } from '../../integrations/filesystem.js';
@@ -45,12 +45,7 @@ async function applyFilePatch(
   projectRoot: string,
   result: PatchApplicationResult,
 ): Promise<void> {
-  // Resolve file path
-  const absFile =
-    resolveProjectFile(patch.file, projectRoot) ??
-    (patch.file.startsWith('/') || patch.file.includes(':')
-      ? patch.file
-      : resolve(projectRoot, patch.file));
+  const absFile = resolvePatchTarget(patch.file, projectRoot);
 
   if (!existsSync(absFile)) {
     throw new Error(`File not found: ${absFile}`);
@@ -86,11 +81,7 @@ export async function revertPatch(
   projectRoot: string,
 ): Promise<void> {
   for (const patch of proposal.patches) {
-    const absFile =
-      resolveProjectFile(patch.file, projectRoot) ??
-      (patch.file.startsWith('/') || patch.file.includes(':')
-        ? patch.file
-        : resolve(projectRoot, patch.file));
+    const absFile = resolvePatchTarget(patch.file, projectRoot);
     const backupPath = absFile + '.bugreplay.orig';
 
     if (existsSync(backupPath)) {
@@ -104,6 +95,23 @@ export async function revertPatch(
  * Build a human-readable colored diff string for display.
  * This is a visual diff only — not a proper unified diff format.
  */
+function resolvePatchTarget(file: string, projectRoot: string): string {
+  const absFile = resolveProjectFile(file, projectRoot);
+
+  if (!absFile) {
+    throw new Error(`Patch target must be an existing file inside the project: ${file}`);
+  }
+
+  const rootResolved = resolve(projectRoot);
+  const rel = relative(rootResolved, absFile);
+
+  if (rel.startsWith('..') || rel === '' || resolve(absFile) === rootResolved) {
+    throw new Error(`Patch target escapes the project root: ${file}`);
+  }
+
+  return absFile;
+}
+
 export function buildDisplayDiff(patch: FilePatch): string {
   const origLines = patch.originalContent.split('\n');
   const patchLines = patch.patchedContent.split('\n');
@@ -118,4 +126,3 @@ export function buildDisplayDiff(patch: FilePatch): string {
 
   return lines.join('\n');
 }
-

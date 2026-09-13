@@ -19,6 +19,7 @@ import {
   printWarning,
   aiPredictionBox,
   closedBox,
+  printNextStep,
 } from '../ui/banner.js';
 import { printIncidentCard } from '../ui/table.js';
 import type { LogEvent } from '../../types/index.js';
@@ -103,14 +104,9 @@ export async function reproduceCommand(
 
     console.log('');
     printSuccess(`Generated test: ${testPath}`);
-    console.log('');
-    console.log(chalk.gray('Next step:'));
-    console.log(chalk.white(`  bug-replay verify ${incidentId}`));
-    console.log(chalk.gray('  (this will run the test and confirm the bug is reproduced)'));
-    console.log('');
+    printNextStep(`bug-replay verify ${incidentId}`, 'Run the generated test and confirm the bug is reproducible.');
   } catch (err) {
     printError(err instanceof Error ? err.message : String(err));
     process.exit(1);
   }
 }
-

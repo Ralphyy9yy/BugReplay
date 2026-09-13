@@ -21,6 +21,7 @@ import {
   printWarning,
   aiPredictionBox,
   closedBox,
+  printNextStep,
 } from '../ui/banner.js';
 import { printIncidentCard } from '../ui/table.js';
 import { renderPatchProposal } from '../ui/diff.js';
@@ -128,14 +129,9 @@ export async function fixCommand(
       process.exit(1);
     }
 
-    console.log('');
-    console.log(chalk.gray('Next step:'));
-    console.log(chalk.white(`  bug-replay verify ${incidentId}`));
-    console.log(chalk.gray('  (run regression test to confirm the fix works)'));
-    console.log('');
+    printNextStep(`bug-replay verify ${incidentId}`, 'Re-run the regression test and verify the patch.');
   } catch (err) {
     printError(err instanceof Error ? err.message : String(err));
     process.exit(1);
   }
 }
-

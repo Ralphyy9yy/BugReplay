@@ -20,6 +20,7 @@ import {
   printLabel,
   aiPredictionBox,
   closedBox,
+  printNextStep,
 } from '../ui/banner.js';
 import { printIncidentCard } from '../ui/table.js';
 import { renderConfidence, confidenceLabel } from '../ui/confidence.js';
@@ -121,10 +122,7 @@ export async function analyzeCommand(
     // Display
     printAnalysisResult(incidentId, analysis);
 
-    console.log('');
-    console.log(chalk.gray('Next step:'));
-    console.log(chalk.white(`  bug-replay reproduce ${incidentId}`));
-    console.log('');
+    printNextStep(`bug-replay reproduce ${incidentId}`, 'Generate a regression test that proves the failure.');
   } catch (err) {
     printError(err instanceof Error ? err.message : String(err));
     if (process.env['BUGREPLAY_LOG_LEVEL'] === 'debug') {
@@ -198,4 +196,3 @@ function printAnalysisResult(incidentId: number, analysis: {
   console.log(chalk.bold.red('STATUS'));
   console.log(chalk.red('🔴 UNVERIFIED — run bug-replay reproduce ' + incidentId + ' to generate test'));
 }
-
