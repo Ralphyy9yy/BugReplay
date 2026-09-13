@@ -6,6 +6,10 @@ BugReplay is an experimental AI-assisted debugging CLI. It groups related errors
 
 The core principle is simple: **AI proposes; evidence supports; tests verify.**
 
+## Terminal Preview
+
+![BugReplay terminal verification output](docs/images/verification.png)
+
 ## What it does
 
 - Parses application logs and extracts stack traces
