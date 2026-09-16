@@ -113,6 +113,14 @@ export async function fixCommand(
       return;
     }
 
+    if (options.apply && patchProposal.confidence < config.minFixConfidence) {
+      printError(
+        `Refusing automatic apply: confidence ${patchProposal.confidence}% is below the configured ${config.minFixConfidence}% threshold.`,
+      );
+      console.log(chalk.yellow('Review the proposal and run without --apply to confirm it interactively.'));
+      return;
+    }
+
     // Apply
     const applySpinner = ora('Applying patch...').start();
     const result = await applyPatch(patchProposal, projectRoot);

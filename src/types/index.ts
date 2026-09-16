@@ -194,6 +194,8 @@ export interface VerificationResult {
   testResult: TestResult;
   aiPrediction?: string;
   aiPredictionCorrect?: boolean;
+  failureMatchedIncident?: boolean;
+  fullSuiteResult?: TestResult;
   verifiedAt: Date;
 }
 
@@ -220,6 +222,11 @@ export interface BugReplayConfig {
   apiBaseUrl?: string;
   logLevel: 'debug' | 'info' | 'warn' | 'error';
   contextLines: number;
+  apiTimeoutMs: number;
+  aiRetries: number;
+  testTimeoutMs: number;
+  minFixConfidence: number;
+  telemetry: boolean;
 }
 
 // ── AI Provider Interface ────────────────────────────────────
@@ -248,4 +255,3 @@ export interface AIProvider {
   generateReproduction(ctx: ReproductionContext): Promise<ReproductionPlan>;
   generatePatch(ctx: PatchContext): Promise<PatchProposal>;
 }
-

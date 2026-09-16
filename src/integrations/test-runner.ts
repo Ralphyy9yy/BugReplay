@@ -2,6 +2,7 @@ import { executeAllowed } from '../security/command-policy.js';
 import type { TestResult } from '../types/index.js';
 import { resolve } from 'node:path';
 import { existsSync } from 'node:fs';
+import { loadConfig } from '../config.js';
 
 /**
  * Run a specific test file using vitest and return structured results.
@@ -34,7 +35,7 @@ export async function runTestFile(
   const command = `npx vitest run ${relPath}`;
 
   try {
-    const result = await executeAllowed(command, projectRoot);
+    const result = await executeAllowed(command, projectRoot, loadConfig().testTimeoutMs);
 
     const passed = result.exitCode === 0;
     const combined = result.stdout + (result.stderr ? '\n' + result.stderr : '');
@@ -82,7 +83,7 @@ export async function runAllTests(projectRoot: string): Promise<TestResult> {
   const start = Date.now();
 
   try {
-    const result = await executeAllowed('npx vitest run', projectRoot);
+    const result = await executeAllowed('npx vitest run', projectRoot, loadConfig().testTimeoutMs);
     const combined = result.stdout + (result.stderr ? '\n' + result.stderr : '');
     const passed = result.exitCode === 0;
 
@@ -105,4 +106,3 @@ export async function runAllTests(projectRoot: string): Promise<TestResult> {
     };
   }
 }
-

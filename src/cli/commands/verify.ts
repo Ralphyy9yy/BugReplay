@@ -9,7 +9,8 @@ import {
   updateIncidentStatus,
 } from '../../storage/store.js';
 import { getTestFilePath } from '../../core/reproduction/generator.js';
-import { runTestFile } from '../../integrations/test-runner.js';
+import { runAllTests, runTestFile } from '../../integrations/test-runner.js';
+import { matchFailureToIncident } from '../../core/verification/failure-matcher.js';
 import {
   printBanner,
   printError,
@@ -83,13 +84,24 @@ export async function verifyCommand(incidentId: number): Promise<void> {
 
     // Determine what the test result means
     const patchApplied = incident.status === 'fixed' || incident.status === 'verified';
+    const failureMatch = matchFailureToIncident(incident, testResult);
+    let fullSuiteResult: Awaited<ReturnType<typeof runAllTests>> | undefined;
 
     if (patchApplied) {
       // After patch: we want the test to PASS
       if (testResult.passed) {
         console.log(chalk.bold.green('✓ Regression test PASSES'));
-        console.log(chalk.green('✓ Bug verified as resolved'));
-        await updateIncidentStatus(incidentId, 'verified', projectRoot);
+        const suiteSpinner = ora('Running the full test suite...').start();
+        fullSuiteResult = await runAllTests(projectRoot);
+        suiteSpinner.stop();
+        if (fullSuiteResult.passed) {
+          console.log(chalk.green('✓ Full test suite PASSES'));
+          console.log(chalk.green('✓ Bug verified as resolved'));
+          await updateIncidentStatus(incidentId, 'verified', projectRoot);
+        } else {
+          console.log(chalk.red('✗ Full test suite FAILS'));
+          console.log(chalk.red('✗ Patch is not verified because the project has regressions'));
+        }
       } else {
         console.log(chalk.bold.red('✗ Regression test FAILS'));
         console.log(chalk.red('✗ Patch did not fix the bug'));
@@ -99,15 +111,19 @@ export async function verifyCommand(incidentId: number): Promise<void> {
       }
     } else {
       // Before patch: we want the test to FAIL (bug reproduced)
-      if (!testResult.passed) {
+      if (!testResult.passed && failureMatch.matched) {
         console.log(chalk.bold.green('✓ Bug reproduced'));
-        console.log(chalk.green('✓ Test correctly fails on the buggy code'));
+        console.log(chalk.green('✓ Failure matches the production incident'));
+        console.log(chalk.gray(`  Matched: ${failureMatch.signals.join('; ')}`));
         if (testResult.failureReason) {
           console.log(chalk.gray('  Failure: ') + chalk.yellow(testResult.failureReason));
         }
-      } else {
+      } else if (testResult.passed) {
         console.log(chalk.bold.yellow('⚠ Test unexpectedly PASSES'));
         console.log(chalk.yellow('⚠ Either the bug was already fixed, or the test does not reproduce it'));
+      } else {
+        console.log(chalk.bold.yellow('⚠ Test fails, but does not match the incident'));
+        console.log(chalk.yellow('⚠ This is not accepted as a successful reproduction'));
       }
     }
 
@@ -129,20 +145,24 @@ export async function verifyCommand(incidentId: number): Promise<void> {
       phase: patchApplied ? 'patch' : 'reproduction',
       testResult,
       aiPrediction: analysis?.summary,
-      aiPredictionCorrect: patchApplied ? testResult.passed : !testResult.passed,
+      aiPredictionCorrect: patchApplied
+        ? testResult.passed && fullSuiteResult?.passed === true
+        : failureMatch.matched,
+      failureMatchedIncident: patchApplied ? undefined : failureMatch.matched,
+      fullSuiteResult,
       verifiedAt: new Date(),
     };
     await saveVerification(verification, projectRoot);
 
     // Summary
     console.log('');
-    if (!patchApplied && !testResult.passed) {
+    if (!patchApplied && failureMatch.matched) {
       console.log(chalk.bold.white('BEFORE'));
       console.log(chalk.red('🔴 Bug reproduced'));
       console.log('');
       console.log(chalk.gray('Next: apply a fix with'));
       console.log(chalk.white(`  bug-replay fix ${incidentId}`));
-    } else if (patchApplied && testResult.passed) {
+    } else if (patchApplied && testResult.passed && fullSuiteResult?.passed) {
       console.log(chalk.bold.white('AFTER'));
       console.log(chalk.green('✓ Patch applied'));
       console.log(chalk.green('✓ Regression test passes'));
@@ -154,4 +174,3 @@ export async function verifyCommand(incidentId: number): Promise<void> {
     process.exit(1);
   }
 }
-

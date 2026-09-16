@@ -58,13 +58,23 @@ export class GeminiProvider implements AIProvider {
   private readonly apiKey: string;
   private readonly model: string;
   private readonly baseUrl: string;
+  private readonly timeoutMs: number;
+  private readonly retries: number;
 
-  constructor(apiKey: string, model = 'gemini-1.5-flash', baseUrl?: string) {
+  constructor(
+    apiKey: string,
+    model = 'gemini-1.5-flash',
+    baseUrl?: string,
+    timeoutMs = 60_000,
+    retries = 3,
+  ) {
     this.apiKey = apiKey;
     this.model = model;
     this.baseUrl =
       baseUrl ??
       'https://generativelanguage.googleapis.com/v1beta/models';
+    this.timeoutMs = timeoutMs;
+    this.retries = retries;
   }
 
   private async callApi(
@@ -98,13 +108,13 @@ export class GeminiProvider implements AIProvider {
     for (const model of candidateModels) {
       const url = `${this.baseUrl}/${model}:generateContent?key=${this.apiKey}`;
 
-      for (let attempt = 1; attempt <= 3; attempt++) {
+      for (let attempt = 1; attempt <= this.retries + 1; attempt++) {
         try {
           const response = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(body),
-            signal: AbortSignal.timeout(60_000), // 60s timeout
+            signal: AbortSignal.timeout(this.timeoutMs),
           });
 
           if (response.status === 503 || response.status === 429) {
@@ -146,7 +156,7 @@ export class GeminiProvider implements AIProvider {
         } catch (err) {
           lastError = err instanceof Error ? err : new Error(String(err));
           // If 503 or transient network error, retry
-          if (attempt < 3 && (lastError.message.includes('503') || lastError.message.includes('429'))) {
+          if (attempt <= this.retries && (lastError.message.includes('503') || lastError.message.includes('429'))) {
             await new Promise((r) => setTimeout(r, 1000 * attempt));
             continue;
           }
@@ -242,4 +252,3 @@ function countChangedLines(original: string, patched: string): number {
   const patchLines = patched.split('\n');
   return patchLines.filter((l) => !origLines.has(l)).length;
 }
-

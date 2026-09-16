@@ -113,6 +113,7 @@ export function getAllowedCommands(): string[] {
 export async function executeAllowed(
   command: string,
   cwd: string,
+  timeoutMs?: number,
 ): Promise<CommandResult> {
   if (!isCommandAllowed(command)) {
     throw new Error(
@@ -153,7 +154,7 @@ export async function executeAllowed(
     const timer = setTimeout(() => {
       timedOut = true;
       child.kill('SIGTERM');
-    }, cmdInfo.timeoutMs);
+    }, timeoutMs ?? cmdInfo.timeoutMs);
 
     child.stdout.on('data', (chunk: Buffer) => {
       stdout += chunk.toString();

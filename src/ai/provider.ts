@@ -8,7 +8,7 @@ import { GeminiProvider } from './providers/gemini.js';
 export function createProvider(config: BugReplayConfig): AIProvider {
   switch (config.provider) {
     case 'gemini':
-      return new GeminiProvider(config.apiKey, config.model, config.apiBaseUrl);
+      return new GeminiProvider(config.apiKey, config.model, config.apiBaseUrl, config.apiTimeoutMs, config.aiRetries);
 
     case 'openai':
       throw new Error(
@@ -28,4 +28,3 @@ export function createProvider(config: BugReplayConfig): AIProvider {
 }
 
 export type { AIProvider };
-

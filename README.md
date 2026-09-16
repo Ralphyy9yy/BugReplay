@@ -83,6 +83,11 @@ BUGREPLAY_AI_PROVIDER=gemini
 BUGREPLAY_MODEL=gemini-flash-latest
 BUGREPLAY_LOG_LEVEL=info
 BUGREPLAY_CONTEXT_LINES=30
+BUGREPLAY_API_TIMEOUT_MS=60000
+BUGREPLAY_AI_RETRIES=3
+BUGREPLAY_TEST_TIMEOUT_MS=120000
+BUGREPLAY_MIN_FIX_CONFIDENCE=75
+BUGREPLAY_TELEMETRY=false
 ```
 
 Never commit `.env`. The included `.gitignore` excludes local environment files while allowing the placeholder-only `.env.example` to be shared.
@@ -178,7 +183,10 @@ Protections currently implemented:
 3. **Command allowlist:** automatic execution is restricted to `npm test`, `npm run test`, `npm install`, and supported `npx vitest run` forms.
 4. **Opt-in source changes:** `fix` asks for confirmation unless `--apply` is explicitly supplied.
 5. **Patch containment:** patch targets must be existing files inside the project root.
-6. **Local state:** incident data is written to the project's `.bugreplay/` directory.
+6. **Failure matching:** a generated test failure counts as a reproduction only when it matches the production error type, message terms, or source file.
+7. **Full-suite verification:** after the regression test passes, the complete Vitest suite must also pass before an incident is marked verified.
+8. **Confidence threshold:** `fix --apply` refuses patches below `BUGREPLAY_MIN_FIX_CONFIDENCE`; low-confidence proposals can still be reviewed interactively.
+9. **Local state:** incident data is written to the project's `.bugreplay/` directory.
 
 Automated redaction reduces risk but cannot guarantee that every possible secret or sensitive value will be detected. Review logs and source material before using AI-powered commands on confidential projects.
 

@@ -1,6 +1,5 @@
 import { config as dotenvConfig } from 'dotenv';
 import { resolve } from 'node:path';
-import { existsSync } from 'node:fs';
 import type { BugReplayConfig } from './types/index.js';
 
 // Load .env from CWD, parent directory, or workspace root
@@ -25,15 +24,14 @@ export function loadConfig(): BugReplayConfig {
   const logLevelRaw = process.env['BUGREPLAY_LOG_LEVEL'] ?? 'info';
   const contextLinesRaw = process.env['BUGREPLAY_CONTEXT_LINES'] ?? '30';
 
-  const provider = VALID_PROVIDERS.includes(providerRaw as typeof VALID_PROVIDERS[number])
-    ? (providerRaw as BugReplayConfig['provider'])
-    : 'gemini';
-
-  const logLevel = VALID_LOG_LEVELS.includes(logLevelRaw as typeof VALID_LOG_LEVELS[number])
-    ? (logLevelRaw as BugReplayConfig['logLevel'])
-    : 'info';
-
-  const contextLines = Math.max(5, Math.min(100, parseInt(contextLinesRaw, 10) || 30));
+  const provider = parseEnum('BUGREPLAY_AI_PROVIDER', providerRaw, VALID_PROVIDERS);
+  const logLevel = parseEnum('BUGREPLAY_LOG_LEVEL', logLevelRaw, VALID_LOG_LEVELS);
+  const contextLines = parseInteger('BUGREPLAY_CONTEXT_LINES', contextLinesRaw, 5, 100);
+  const apiTimeoutMs = parseInteger('BUGREPLAY_API_TIMEOUT_MS', process.env['BUGREPLAY_API_TIMEOUT_MS'] ?? '60000', 1000, 300000);
+  const aiRetries = parseInteger('BUGREPLAY_AI_RETRIES', process.env['BUGREPLAY_AI_RETRIES'] ?? '3', 0, 10);
+  const testTimeoutMs = parseInteger('BUGREPLAY_TEST_TIMEOUT_MS', process.env['BUGREPLAY_TEST_TIMEOUT_MS'] ?? '120000', 1000, 600000);
+  const minFixConfidence = parseInteger('BUGREPLAY_MIN_FIX_CONFIDENCE', process.env['BUGREPLAY_MIN_FIX_CONFIDENCE'] ?? '75', 0, 100);
+  const telemetry = parseBoolean('BUGREPLAY_TELEMETRY', process.env['BUGREPLAY_TELEMETRY'] ?? 'false');
 
   return {
     apiKey,
@@ -42,7 +40,35 @@ export function loadConfig(): BugReplayConfig {
     apiBaseUrl,
     logLevel,
     contextLines,
+    apiTimeoutMs,
+    aiRetries,
+    testTimeoutMs,
+    minFixConfidence,
+    telemetry,
   };
+}
+
+function parseEnum<T extends string>(name: string, value: string, allowed: readonly T[]): T {
+  if (!allowed.includes(value as T)) {
+    throw new Error(`Invalid ${name}: "${value}". Expected one of: ${allowed.join(', ')}`);
+  }
+  return value as T;
+}
+
+function parseInteger(name: string, value: string, min: number, max: number): number {
+  if (!/^\d+$/.test(value)) throw new Error(`Invalid ${name}: "${value}". Expected an integer.`);
+  const parsed = Number(value);
+  if (!Number.isSafeInteger(parsed) || parsed < min || parsed > max) {
+    throw new Error(`Invalid ${name}: "${value}". Expected ${min}-${max}.`);
+  }
+  return parsed;
+}
+
+function parseBoolean(name: string, value: string): boolean {
+  if (value !== 'true' && value !== 'false') {
+    throw new Error(`Invalid ${name}: "${value}". Expected true or false.`);
+  }
+  return value === 'true';
 }
 
 export function requireApiKey(config: BugReplayConfig): void {
@@ -58,4 +84,3 @@ export function requireApiKey(config: BugReplayConfig): void {
     );
   }
 }
-
